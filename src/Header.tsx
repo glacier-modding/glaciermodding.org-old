@@ -1,10 +1,14 @@
 import Link from "next/link"
 
-export default function Header() {
+interface HeaderProps {
+    logo?: JSX.Element
+}
+
+export default function Header({ logo }: HeaderProps) {
     return (
         <header className="header">
             <span className="header-inner">
-                <Link href={"/"}>Notex.app</Link>
+                {logo !== void 0 ? logo : <Link href="/">Notex.app</Link>}
                 <span className="header-right">
                     <nav className="menu">
                         <ul className="menu-inner">

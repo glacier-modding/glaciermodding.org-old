@@ -30,8 +30,10 @@ export const latest: RpkgVersion = {
                                 Reimporting:
                                 <ul>
                                     <li>
-                                        Rebuild menu: “Rebuild Primitive Models (PRIM/TEXT/TEXD) From
-                                        Folder” (RPKG(s) archive(s) will also automatically generate).
+                                        Rebuild menu: “Rebuild Primitive Models
+                                        (PRIM/TEXT/TEXD) From Folder” (RPKG(s)
+                                        archive(s) will also automatically
+                                        generate).
                                     </li>
                                 </ul>
                             </li>
@@ -41,7 +43,8 @@ export const latest: RpkgVersion = {
                         CLI:
                         <ul>
                             <li>
-                                -extract_all_prim_model_of_temp_from and -rebuild_prim_model_in.
+                                -extract_all_prim_model_of_temp_from and
+                                -rebuild_prim_model_in.
                             </li>
                         </ul>
                     </li>
@@ -49,7 +52,8 @@ export const latest: RpkgVersion = {
             </li>
             <li>Added error handling to the GUI when rebuilding PRIMs.</li>
             <li>
-                Added interactive mode to rpkg-cli which can be access using the -i argument.
+                Added interactive mode to rpkg-cli which can be access using the
+                -i argument.
             </li>
         </ul>
     ),

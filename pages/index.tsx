@@ -3,7 +3,7 @@ import Header from "../src/Header"
 
 export default function Home() {
     return (
-        <div className={"container"}>
+        <div className="container">
             <Head>
                 <title>
                     Notex.app - Glacier Engine 2 - Tools and Resources

@@ -62,13 +62,20 @@ function DownloadButton({ versionId }: DownloadButtonProps) {
     )
 }
 
-export default function Rpkg({
-    versions,
-    latest,
-}: {
-    versions: (RpkgVersion & { changelog: string })[]
-    latest: RpkgVersion & { changelog: string }
-}) {
+// we should probably check why these 2 constants need to
+
+const rpkgVersions = versions.map((v) => {
+    // @ts-expect-error Yup
+    v.changelog = renderToString(v.changelog)
+    return v
+}) as (RpkgVersion & { changelog: string })[]
+
+const rpkgLatest = {
+    id: latest.id,
+    changelog: renderToString(latest.changelog),
+}
+
+export default function Rpkg() {
     const [imgOpen, setImgOpen] = React.useState<boolean>(false)
 
     return (
@@ -93,13 +100,11 @@ export default function Rpkg({
 
                     <h2 className="is-gray">
                         Developed by{" "}
-                        <span className="is-not-gray">
-                            [REDACTED]
-                        </span>{" "}
-                        and hosted by Notex.
+                        <span className="is-not-gray">[REDACTED]</span> and
+                        hosted by Notex.
                     </h2>
 
-                    <DownloadButton versionId={latest.id} />
+                    <DownloadButton versionId={rpkgLatest.id} />
 
                     <Button
                         variant="outlined"
@@ -110,7 +115,7 @@ export default function Rpkg({
 
                     {imgOpen ? <RpkgImage /> : null}
 
-                    {versions.map((v) => (
+                    {rpkgVersions.map((v) => (
                         <Accordion key={v.id}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
@@ -120,9 +125,11 @@ export default function Rpkg({
                                 <p>New in v{v.id}</p>
                             </AccordionSummary>
                             <AccordionDetails className="changelog">
-                                <div dangerouslySetInnerHTML={{
-                                    __html: v.changelog,
-                                }} />
+                                <div
+                                    dangerouslySetInnerHTML={{
+                                        __html: v.changelog,
+                                    }}
+                                />
                             </AccordionDetails>
                         </Accordion>
                     ))}
@@ -130,24 +137,4 @@ export default function Rpkg({
             </ThemeProvider>
         </div>
     )
-}
-
-// This function gets called at build time on server-side.
-// It may be called again, on a serverless function, if
-// revalidation is enabled and a new request comes in
-export async function getStaticProps() {
-    return {
-        props: {
-            versions: versions.map((v) => {
-                // @ts-expect-error Yup
-                v.changelog = renderToString(v.changelog)
-                return v
-            }),
-            latest: {
-                id: latest.id,
-                changelog: renderToString(latest.changelog),
-            },
-        },
-        revalidate: 900, // In seconds
-    }
 }
