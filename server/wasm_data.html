@@ -16,6 +16,7 @@
     </div>
     <script>
         ;(function () {
+            document.getElementById("failed-load-notif").hidden = true
             const __exports = {}
             let wasm
 
@@ -264,7 +265,7 @@
                     a.click()
                     window.URL.revokeObjectURL(url)
                 }
-            })();
+            })()
 
             let fileName = "compiled"
 

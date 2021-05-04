@@ -19,9 +19,9 @@ export default function Header({ logo }: HeaderProps) {
                                 <Link href="/rpkg">RPKG Tool</Link>
                             </li>
                             <li>
-                                <a href="/tools/online/xtea/">
+                                <Link href="/tools/online/xtea/">
                                     XTEA Online Tool
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

@@ -3,12 +3,9 @@ import {
     Accordion,
     AccordionDetails,
     AccordionSummary,
-    Button,
     createMuiTheme,
-    withStyles,
     ThemeProvider,
 } from "@material-ui/core"
-import { green } from "@material-ui/core/colors"
 import Head from "next/head"
 import Link from "next/link"
 import Header from "../src/Header"
@@ -32,50 +29,48 @@ const darkTheme = createMuiTheme({
             "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
     },
     overrides: {
-        MuiButton: {
+        MuiAccordion: {
             root: {
-                marginBottom: "20px",
+                width: "90%",
             },
         },
     },
 })
 
-const ColorButton = withStyles((theme) => ({
-    root: {
-        color: theme.palette.getContrastText(green[500]),
-        backgroundColor: green[500],
-        "&:hover": {
-            backgroundColor: green[700],
-        },
-        marginBottom: "20px",
-        letterSpacing: "0em",
-    },
-}))(Button)
-
 function DownloadButton({ versionId }: DownloadButtonProps) {
     return (
         <Link href={`/tools/rpkg/rpkg_v${versionId}.zip`}>
-            <ColorButton variant="outlined">
-                <b>Download v{versionId}</b>
-            </ColorButton>
+            <div className="buttons">
+                <a>Download v{versionId}</a>
+            </div>
         </Link>
     )
 }
 
-// we should probably check why these 2 constants need to
+export async function getStaticProps() {
+    // we should probably check why these 2 constants need to
+    // be out of hooks
 
-const rpkgVersions = versions.map((v) => {
-    // @ts-expect-error Yup
-    v.changelog = renderToString(v.changelog)
-    return v
-}) as (RpkgVersion & { changelog: string })[]
+    const rpkgVersions = versions.map((v) => {
+        // @ts-expect-error Yup
+        v.changelog = renderToString(v.changelog)
+        return v
+    }) as (RpkgVersion & { changelog: string })[]
 
-const rpkgLatest = {
-    id: latest.id,
-    changelog: renderToString(latest.changelog),
+    const rpkgLatest = {
+        id: latest.id,
+        changelog: renderToString(latest.changelog),
+    }
+
+    return {
+        props: {
+            latestVer: rpkgLatest,
+            allVersions: rpkgVersions,
+        },
+    }
 }
 
-export default function Rpkg() {
+export default function Rpkg({ latestVer, allVersions }) {
     const [imgOpen, setImgOpen] = React.useState<boolean>(false)
 
     return (
@@ -104,18 +99,20 @@ export default function Rpkg() {
                         hosted by Notex.
                     </h2>
 
-                    <DownloadButton versionId={rpkgLatest.id} />
+                    <DownloadButton versionId={latestVer.id} />
 
-                    <Button
-                        variant="outlined"
+                    <div
+                        className="buttons"
                         onClick={() => setImgOpen(!imgOpen)}
                     >
-                        {imgOpen ? "Hide Demo" : "Show Demo"}
-                    </Button>
+                        <span className="button-color-white">
+                            {imgOpen ? "Hide Demo" : "Show Demo"}
+                        </span>
+                    </div>
 
                     {imgOpen ? <RpkgImage /> : null}
 
-                    {rpkgVersions.map((v) => (
+                    {allVersions.map((v) => (
                         <Accordion key={v.id}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
