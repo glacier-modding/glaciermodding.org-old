@@ -118,6 +118,8 @@ a {
 
 .changelog {
     text-align: left;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 code {

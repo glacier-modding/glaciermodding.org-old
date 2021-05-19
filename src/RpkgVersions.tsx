@@ -6,6 +6,121 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.12",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    Entity/Brick (TEMP/TBLU) Editor:
+                    <ul>
+                        <li>
+                            ResourceTool implementation for the Brick Editor
+                            which allows full rebuilding (Adding/removing
+                            entities coming soon).
+                        </li>
+                        <li>
+                            Generating RPKGs/Saving TEMPs will now only use one
+                            single output folder per RPKG base chunk name,
+                            instead of splitting files into chunk* and
+                            chunk*patch* folders.
+                        </li>
+                        <li>
+                            Implemented a proper progress bar when the TEMP/TBLU
+                            files are being recursively loaded.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_11_2: RpkgVersion = {
+    id: "2.11.2",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    Significantly improved search result speeds and also added
+                    20k, 50k and 100k search options.
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_11_1: RpkgVersion = {
+    id: "2.11.1",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    Fixed a texture color issue involving the extraction and
+                    rebuilding of BC7 (0x5A) type textures
+                </li>
+                <li>
+                    Fixed an issue where the hash depends button wasn't working
+                    properly on hashes found via the search function
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_10: RpkgVersion = {
+    id: "2.10",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    GUI and CLI
+                    <ul>
+                        <li>
+                            Recursive hash dependency extraction
+                            <ul>
+                                <li>
+                                    <code>-extract_all_hash_depends_from</code>{" "}
+                                    and{" "}
+                                    <code>
+                                        -extract_all_hash_depends_prim_models_from
+                                    </code>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Direct hashes only dependency extraction
+                            <ul>
+                                <li>
+                                    <code>
+                                        -extract_direct_hash_depends_from
+                                    </code>{" "}
+                                    and{" "}
+                                    <code>
+                                        -extract_direct_hash_depends_prim_models_from
+                                    </code>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    GUI
+                    <ul>
+                        <li>Hash dependency editor</li>
+                        <li>Patch archive deletion list editor</li>
+                    </ul>
+                </li>
+                <li>
+                    Changed <code>-extract_direct_hash_depends</code> to
+                    <code>-extract_direct_hash_depends_from</code> for
+                    uniformity
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_9: RpkgVersion = {
     id: "2.9",
     changelog: (
         <React.Fragment>
@@ -44,8 +159,11 @@ export const latest: RpkgVersion = {
                             CLI:
                             <ul>
                                 <li>
-                                    -extract_all_prim_model_of_temp_from and
-                                    -rebuild_prim_model_in.
+                                    <code>
+                                        -extract_all_prim_model_of_temp_from
+                                    </code>{" "}
+                                    and
+                                    <code>-rebuild_prim_model_in</code>.
                                 </li>
                             </ul>
                         </li>
@@ -54,7 +172,7 @@ export const latest: RpkgVersion = {
                 <li>Added error handling to the GUI when rebuilding PRIMs.</li>
                 <li>
                     Added interactive mode to rpkg-cli which can be access using
-                    the -i argument.
+                    the <code>-i</code> argument.
                 </li>
             </ul>
         </React.Fragment>
@@ -330,7 +448,10 @@ export const VERSION_2_4: RpkgVersion = {
                     HITMAN 3: Implemented entity/brick (TEMP) file editing
                     (accessed by right clicking on TEMP files)
                 </li>
-                <li>Added IOI paths to -hash_depends command line argument</li>
+                <li>
+                    Added IOI paths to <code>-hash_depends</code> command line
+                    argument
+                </li>
                 <li>Fixed H1 issue again</li>
             </ul>
         </React.Fragment>
@@ -581,9 +702,9 @@ export const VERSION_1_11: RpkgVersion = {
         <React.Fragment>
             <ul>
                 <li>
-                    Added hash probe function (-hash_probe) that allows you to
-                    probe RPKG files for the existence of the hash file/resource
-                    and provides information.
+                    Added hash probe function (<code>-hash_probe</code>) that
+                    allows you to probe RPKG files for the existence of the hash
+                    file/resource and provides information.
                 </li>
                 <li>
                     Added an error message to indicate if a resource was not
@@ -687,6 +808,10 @@ export const VERSION_1: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_11_2,
+    VERSION_2_11_1,
+    VERSION_2_10,
+    VERSION_2_9,
     VERSION_2_8,
     VERSION_2_7,
     VERSION_2_6,

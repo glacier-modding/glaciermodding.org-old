@@ -6,7 +6,7 @@
         "dev": "next dev",
         "build": "next build && yarn node postbuild",
         "start": "next start",
-        "prettier": "prettier --write **/*.{ts,js,tsx,jsx,json,md,css,html}"
+        "prettier": "prettier --write **/*.{ts,js,tsx,json,md,css,html}"
     },
     "dependencies": {
         "@material-ui/core": "^4.11.4",
