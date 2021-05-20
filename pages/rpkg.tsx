@@ -11,13 +11,10 @@ import {
 import Head from "next/head"
 import Link from "next/link"
 import Header from "../src/Header"
-import dynamic from "next/dynamic"
 import { latest, RpkgVersion, versions } from "../src/RpkgVersions"
 import { renderToString } from "react-dom/server"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-
-// lazy load to reduce bundle size
-const RpkgImage = dynamic(() => import("../src/RpkgImage"))
+import Image from "next/image"
 
 interface DownloadButtonProps {
     versionId: string
@@ -132,7 +129,14 @@ export default function Rpkg({ allVersions }) {
                         hosted by Notex.
                     </h2>
 
-                    <RpkgImage style={{ width: "640px", height: "400px" }} />
+                    <Image
+                        width={1920}
+                        height={1080}
+                        layout={"intrinsic"}
+                        className="rpkg-image"
+                        src="/rpkg-in-action.png"
+                        alt="The RPKG tool in action."
+                    />
 
                     <div style={{ marginTop: "19.92px" }} />
 
