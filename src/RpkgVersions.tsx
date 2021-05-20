@@ -6,6 +6,65 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.13",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    Entity/Brick (TEMP/TBLU) Editor:
+                    <ul>
+                        <li>
+                            Added Hitman 2 functionality to the Entity/Brick (TEMP/TBLU) Editor (by adding such functionality to ResourceTool)
+                        </li>
+                        <li>
+                            Added the option to load the Entity/Brick (TEMP/TBLU) Editor in non-recursive mode
+                        </li>
+                        <li>
+                            Restored and moved the expand and collapse all nodes buttons in the Entity/Brick (TEMP/TBLU) Editor
+                        </li>
+                        <li>
+                            The Entity/Brick (TEMP/TBLU) Editor now allows editing of the TEMP’s:
+                            <ul>
+                                <li>
+                                    subEntities: propertyValues
+                                </li>
+                                <li>
+                                    subEntities: postInitPropertyValues
+                                </li>
+                                <li>
+                                    subEntities: platformSpecificPropertyValues
+                                </li>
+                                <li>
+                                    subType
+                                </li>
+                                <li>
+                                    blueprintIndexInResourceHeader
+                                </li>
+                                <li>
+                                    rootEntityIndex
+                                </li>
+                                <li>
+                                    propertyOverrides
+                                </li>
+                                <li>
+                                    externalSceneTypeIndicesInResourceHeader
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Implemented a single progress window/bar when importing all the RPKGs in a folder
+                </li>
+                <li>
+                    Added multi-line IOI hash calculator function in the GUI
+                </li>
+            </ul>
+        </React.Fragment>
+    )
+}
+
+export const VERSION_2_12: RpkgVersion = {
     id: "2.12",
     changelog: (
         <React.Fragment>
@@ -808,6 +867,7 @@ export const VERSION_1: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_12,
     VERSION_2_11_2,
     VERSION_2_11_1,
     VERSION_2_10,
