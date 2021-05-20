@@ -1,10 +1,12 @@
 import React from "react"
 import {
     Accordion,
+    AccordionActions,
     AccordionDetails,
     AccordionSummary,
+    Button,
     createMuiTheme,
-    ThemeProvider,
+    ThemeProvider
 } from "@material-ui/core"
 import Head from "next/head"
 import Link from "next/link"
@@ -24,6 +26,12 @@ interface DownloadButtonProps {
 const darkTheme = createMuiTheme({
     palette: {
         type: "dark",
+        primary: {
+            main: "#a6d4fa",
+        },
+        secondary: {
+            main: "#81c784",
+        },
     },
     typography: {
         fontFamily:
@@ -34,7 +42,21 @@ const darkTheme = createMuiTheme({
         MuiAccordion: {
             root: {
                 width: "90%",
+                "&$expanded": {
+                    margin: "auto",
+                },
             },
+        },
+        MuiAccordionSummary: {
+            root: {
+                marginBottom: -1,
+            },
+            content: {
+                "&$expanded": {
+                    margin: "12px 0",
+                },
+            },
+            expanded: {},
         },
     },
 })
@@ -42,9 +64,19 @@ const darkTheme = createMuiTheme({
 function DownloadButton({ versionId }: DownloadButtonProps) {
     return (
         <Link href={`/tools/rpkg/rpkg_v${versionId}.zip`}>
-            <div className="buttons">
-                <a>Download v{versionId}</a>
-            </div>
+            <Button variant={"contained"} color={"secondary"}>
+                Download v{versionId}
+            </Button>
+        </Link>
+    )
+}
+
+function DownloadSrcButton({ versionId }: DownloadButtonProps) {
+    return (
+        <Link href={`/tools/rpkg/rpkg_v${versionId}-src.zip`}>
+            <Button variant={"contained"} color={"primary"}>
+                Download Source
+            </Button>
         </Link>
     )
 }
@@ -59,21 +91,17 @@ export async function getStaticProps() {
         return v
     }) as (RpkgVersion & { changelog: string })[]
 
-    const rpkgLatest = {
-        id: latest.id,
-        changelog: renderToString(latest.changelog),
-    }
-
     return {
         props: {
-            latestVer: rpkgLatest,
             allVersions: rpkgVersions,
         },
     }
 }
 
-export default function Rpkg({ latestVer, allVersions }) {
-    const [imgOpen, setImgOpen] = React.useState<boolean>(false)
+export default function Rpkg({ allVersions }) {
+    // The rest of the accordions are controlled by themselves,
+    // but we want this one to be open by default so we manually take control
+    // of it's open/closed state.
     const [firstAccordionOpen, setFirstAccordionOpen] = React.useState<boolean>(
         true
     )
@@ -104,18 +132,9 @@ export default function Rpkg({ latestVer, allVersions }) {
                         hosted by Notex.
                     </h2>
 
-                    <DownloadButton versionId={latestVer.id} />
+                    <RpkgImage style={{ width: "640px", height: "400px" }} />
 
-                    <div
-                        className="buttons"
-                        onClick={() => setImgOpen(!imgOpen)}
-                    >
-                        <span className="button-color-white">
-                            {imgOpen ? "Hide Demo" : "Show Demo"}
-                        </span>
-                    </div>
-
-                    {imgOpen ? <RpkgImage /> : null}
+                    <div style={{ marginTop: "19.92px" }} />
 
                     {allVersions.map((v) => (
                         <Accordion
@@ -146,6 +165,10 @@ export default function Rpkg({ latestVer, allVersions }) {
                                     }}
                                 />
                             </AccordionDetails>
+                            <AccordionActions>
+                                <DownloadButton versionId={v.id} />
+                                <DownloadSrcButton versionId={v.id} />
+                            </AccordionActions>
                         </Accordion>
                     ))}
                 </main>
