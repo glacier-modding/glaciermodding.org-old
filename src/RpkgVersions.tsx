@@ -6,6 +6,21 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.14",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>Updated ResourceTool by adding subEntities counts for generated TEMP and TBLU files to not only mimic IOI's TEMP and TBLU files, but to help RPKG with version checking</li>
+                <li>Added a check for TEMP and TBLU mismatched subEntities counts when loading the Entity/Brick (TEMP/TBLU ) Editor, and if mismatched a warning is displayed</li>
+                <li>Added hash list checking in the Hash Calculator to let you know if a given hash is in the hash list or not</li>
+                <li>Fixed an issue where TEMP and TBLU files which have a mismatched subEntities count would cause RPKG to crash</li>
+                <li>Fixed an issue where RPKG would halt or crash due to blank/empty H2 RPKG files</li>
+            </ul>
+        </React.Fragment>
+    )
+}
+
+export const VERSION_2_13: RpkgVersion = {
     id: "2.13",
     changelog: (
         <React.Fragment>
@@ -854,8 +869,8 @@ export const VERSION_1_01: RpkgVersion = {
     ),
 }
 
-export const VERSION_1: RpkgVersion = {
-    id: "1",
+export const VERSION_1_00: RpkgVersion = {
+    id: "1.00",
     changelog: (
         <React.Fragment>
             <ul>
@@ -867,6 +882,7 @@ export const VERSION_1: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_13,
     VERSION_2_12,
     VERSION_2_11_2,
     VERSION_2_11_1,
@@ -891,5 +907,5 @@ export const versions: RpkgVersion[] = [
     VERSION_1_03,
     VERSION_1_02,
     VERSION_1_01,
-    VERSION_1,
+    VERSION_1_00,
 ]
