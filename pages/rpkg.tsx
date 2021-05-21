@@ -130,8 +130,8 @@ export default function Rpkg({ allVersions }) {
                     </h2>
 
                     <Image
-                        width={1920}
-                        height={1080}
+                        width={1280}
+                        height={800}
                         layout={"intrinsic"}
                         className="rpkg-image"
                         src="/rpkg-in-action.png"
