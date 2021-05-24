@@ -163,11 +163,14 @@ export default function Rpkg({ allVersions }) {
                                 <p>New in v{v.id}</p>
                             </AccordionSummary>
                             <AccordionDetails className="changelog">
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: v.changelog,
-                                    }}
-                                />
+                                <div>
+                                    <p>Released {v.date}.</p>
+                                    <div
+                                        dangerouslySetInnerHTML={{
+                                            __html: v.changelog,
+                                        }}
+                                    />
+                                </div>
                             </AccordionDetails>
                             <AccordionActions>
                                 <DownloadButton versionId={v.id} />
