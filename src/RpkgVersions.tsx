@@ -7,6 +7,26 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.15",
+    date: "26 May 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>Entity/Brick (TEMP/TBLU) Editor:</li>
+                    <ul>
+                        <li>Converted to <a href="https://github.com/OrfeasZ/ZHMTools/">ZHMTools's ResourceLib</a> for full H2 and H3 support.</li>
+                        <li>Added a "Go" button for EntityIndex properties which takes you directly to the entity being referenced.</li>
+                        <li>Added treeview entity (node) history so you can easily revisit entities (nodes) you were previously on.</li>
+                        <li>Added JSON export feature that will output TEMP/TBLUs to prettified JSONs for any TEMPs that have been modified.</li>
+                    </ul>
+                <li>Added optional Discord Rich Presence (Off by default).</li>
+                <li>Fixed an issue that would cause RPKG to crash if the "InputFolder" property in "rpkg.json" was pointing to a deleted directory.</li>
+            </ul>
+        </React.Fragment>
+    )
+}
+
+export const VERSION_2_14: RpkgVersion = {
     id: "2.14",
     date: "21 May 2021",
     changelog: (
@@ -910,6 +930,7 @@ export const VERSION_1_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_14,
     VERSION_2_13,
     VERSION_2_12,
     VERSION_2_11_2,
