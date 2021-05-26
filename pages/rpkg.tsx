@@ -6,7 +6,9 @@ import {
     AccordionSummary,
     Button,
     createMuiTheme,
-    ThemeProvider
+    Grid,
+    IconButton,
+    ThemeProvider,
 } from "@material-ui/core"
 import Head from "next/head"
 import Link from "next/link"
@@ -15,6 +17,7 @@ import { latest, RpkgVersion, versions } from "../src/RpkgVersions"
 import { renderToString } from "react-dom/server"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import Image from "next/image"
+import { ChevronLeft, ChevronRight } from "@material-ui/icons"
 
 interface DownloadButtonProps {
     versionId: string
@@ -99,9 +102,16 @@ export default function Rpkg({ allVersions }) {
     // The rest of the accordions are controlled by themselves,
     // but we want this one to be open by default so we manually take control
     // of it's open/closed state.
-    const [firstAccordionOpen, setFirstAccordionOpen] = React.useState<boolean>(
-        true
-    )
+    const [firstAccordionOpen, setFirstAccordionOpen] =
+        React.useState<boolean>(true)
+    const [image, setImage] = React.useState<number>(0)
+    const images = [
+        "/rpkg-in-action.png",
+        "/rpkg-2.png",
+        "/rpkg-3.png",
+        "/rpkg-4.png",
+        "/rpkg-5.png",
+    ]
 
     return (
         <div className="container">
@@ -134,11 +144,35 @@ export default function Rpkg({ allVersions }) {
                         height={800}
                         layout={"intrinsic"}
                         className="rpkg-image"
-                        src="/rpkg-in-action.png"
+                        src={images[image]}
                         alt="The RPKG tool in action."
                     />
 
-                    <div style={{ marginTop: "19.92px" }} />
+                    <Grid
+                        container
+                        justify="center"
+                        style={{ margin: "19.92px" }}
+                    >
+                        <IconButton
+                            disabled={image === 0}
+                            onClick={() => {
+                                image !== 0 && setImage(image - 1)
+                            }}
+                        >
+                            <ChevronLeft />
+                        </IconButton>
+
+                        <IconButton
+                            onClick={() => {
+                                image + 1 < images.length
+                                    ? setImage(image + 1)
+                                    : void 0
+                            }}
+                            disabled={images.length === image + 1}
+                        >
+                            <ChevronRight />
+                        </IconButton>
+                    </Grid>
 
                     {allVersions.map((v) => (
                         <Accordion
@@ -146,19 +180,19 @@ export default function Rpkg({ allVersions }) {
                             expanded={
                                 v.id === latest.id ? firstAccordionOpen : void 0
                             }
-                            onClick={
-                                v.id === latest.id
-                                    ? () =>
-                                          setFirstAccordionOpen(
-                                              !firstAccordionOpen
-                                          )
-                                    : void 0
-                            }
                         >
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls={`changelog-${v.id}-content`}
                                 id={`changelog-${v.id}-header`}
+                                onClick={
+                                    v.id === latest.id
+                                        ? () =>
+                                              setFirstAccordionOpen(
+                                                  !firstAccordionOpen
+                                              )
+                                        : void 0
+                                }
                             >
                                 <p>New in v{v.id}</p>
                             </AccordionSummary>
