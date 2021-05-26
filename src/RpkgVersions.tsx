@@ -13,17 +13,36 @@ export const latest: RpkgVersion = {
         <React.Fragment>
             <ul>
                 <li>Entity/Brick (TEMP/TBLU) Editor:</li>
-                    <ul>
-                        <li>Converted to <a href="https://github.com/OrfeasZ/ZHMTools/">ZHMTools's ResourceLib</a> for full H2 and H3 support.</li>
-                        <li>Added a "Go" button for EntityIndex properties which takes you directly to the entity being referenced.</li>
-                        <li>Added treeview entity (node) history so you can easily revisit entities (nodes) you were previously on.</li>
-                        <li>Added JSON export feature that will output TEMP/TBLUs to prettified JSONs for any TEMPs that have been modified.</li>
-                    </ul>
+                <ul>
+                    <li>
+                        Converted to{" "}
+                        <a href="https://github.com/OrfeasZ/ZHMTools/">
+                            ZHMTools's ResourceLib
+                        </a>{" "}
+                        for full H2 and H3 support.
+                    </li>
+                    <li>
+                        Added a "Go" button for EntityIndex properties which
+                        takes you directly to the entity being referenced.
+                    </li>
+                    <li>
+                        Added treeview entity (node) history so you can easily
+                        revisit entities (nodes) you were previously on.
+                    </li>
+                    <li>
+                        Added JSON export feature that will output TEMP/TBLUs to
+                        prettified JSONs for any TEMPs that have been modified.
+                    </li>
+                </ul>
                 <li>Added optional Discord Rich Presence (Off by default).</li>
-                <li>Fixed an issue that would cause RPKG to crash if the "InputFolder" property in "rpkg.json" was pointing to a deleted directory.</li>
+                <li>
+                    Fixed an issue that would cause RPKG to crash if the
+                    "InputFolder" property in "rpkg.json" was pointing to a
+                    deleted directory.
+                </li>
             </ul>
         </React.Fragment>
-    )
+    ),
 }
 
 export const VERSION_2_14: RpkgVersion = {
@@ -32,14 +51,31 @@ export const VERSION_2_14: RpkgVersion = {
     changelog: (
         <React.Fragment>
             <ul>
-                <li>Updated ResourceTool by adding subEntities counts for generated TEMP and TBLU files to not only mimic IOI's TEMP and TBLU files, but to help RPKG with version checking</li>
-                <li>Added a check for TEMP and TBLU mismatched subEntities counts when loading the Entity/Brick (TEMP/TBLU ) Editor, and if mismatched a warning is displayed</li>
-                <li>Added hash list checking in the Hash Calculator to let you know if a given hash is in the hash list or not</li>
-                <li>Fixed an issue where TEMP and TBLU files which have a mismatched subEntities count would cause RPKG to crash</li>
-                <li>Fixed an issue where RPKG would halt or crash due to blank/empty H2 RPKG files</li>
+                <li>
+                    Updated ResourceTool by adding subEntities counts for
+                    generated TEMP and TBLU files to not only mimic IOI's TEMP
+                    and TBLU files, but to help RPKG with version checking
+                </li>
+                <li>
+                    Added a check for TEMP and TBLU mismatched subEntities
+                    counts when loading the Entity/Brick (TEMP/TBLU ) Editor,
+                    and if mismatched a warning is displayed
+                </li>
+                <li>
+                    Added hash list checking in the Hash Calculator to let you
+                    know if a given hash is in the hash list or not
+                </li>
+                <li>
+                    Fixed an issue where TEMP and TBLU files which have a
+                    mismatched subEntities count would cause RPKG to crash
+                </li>
+                <li>
+                    Fixed an issue where RPKG would halt or crash due to
+                    blank/empty H2 RPKG files
+                </li>
             </ul>
         </React.Fragment>
-    )
+    ),
 }
 
 export const VERSION_2_13: RpkgVersion = {
@@ -52,38 +88,31 @@ export const VERSION_2_13: RpkgVersion = {
                     Entity/Brick (TEMP/TBLU) Editor:
                     <ul>
                         <li>
-                            Added Hitman 2 functionality to the Entity/Brick (TEMP/TBLU) Editor (by adding such functionality to ResourceTool)
+                            Added Hitman 2 functionality to the Entity/Brick
+                            (TEMP/TBLU) Editor (by adding such functionality to
+                            ResourceTool)
                         </li>
                         <li>
-                            Added the option to load the Entity/Brick (TEMP/TBLU) Editor in non-recursive mode
+                            Added the option to load the Entity/Brick
+                            (TEMP/TBLU) Editor in non-recursive mode
                         </li>
                         <li>
-                            Restored and moved the expand and collapse all nodes buttons in the Entity/Brick (TEMP/TBLU) Editor
+                            Restored and moved the expand and collapse all nodes
+                            buttons in the Entity/Brick (TEMP/TBLU) Editor
                         </li>
                         <li>
-                            The Entity/Brick (TEMP/TBLU) Editor now allows editing of the TEMP’s:
+                            The Entity/Brick (TEMP/TBLU) Editor now allows
+                            editing of the TEMP’s:
                             <ul>
-                                <li>
-                                    subEntities: propertyValues
-                                </li>
-                                <li>
-                                    subEntities: postInitPropertyValues
-                                </li>
+                                <li>subEntities: propertyValues</li>
+                                <li>subEntities: postInitPropertyValues</li>
                                 <li>
                                     subEntities: platformSpecificPropertyValues
                                 </li>
-                                <li>
-                                    subType
-                                </li>
-                                <li>
-                                    blueprintIndexInResourceHeader
-                                </li>
-                                <li>
-                                    rootEntityIndex
-                                </li>
-                                <li>
-                                    propertyOverrides
-                                </li>
+                                <li>subType</li>
+                                <li>blueprintIndexInResourceHeader</li>
+                                <li>rootEntityIndex</li>
+                                <li>propertyOverrides</li>
                                 <li>
                                     externalSceneTypeIndicesInResourceHeader
                                 </li>
@@ -92,14 +121,15 @@ export const VERSION_2_13: RpkgVersion = {
                     </ul>
                 </li>
                 <li>
-                    Implemented a single progress window/bar when importing all the RPKGs in a folder
+                    Implemented a single progress window/bar when importing all
+                    the RPKGs in a folder
                 </li>
                 <li>
                     Added multi-line IOI hash calculator function in the GUI
                 </li>
             </ul>
         </React.Fragment>
-    )
+    ),
 }
 
 export const VERSION_2_12: RpkgVersion = {
