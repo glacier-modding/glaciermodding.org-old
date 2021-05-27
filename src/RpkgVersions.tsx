@@ -7,6 +7,20 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.15.1",
+    date: "27 May 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>Revamped Discord Rich Presence integration.</li>
+                <li>Added Discord invite link for the Glacier² Modding server.</li>
+                <li>Fixed RPKG crashing when exiting if Discord Rich Presence was disabled.</li>
+            </ul>
+        </React.Fragment>
+    )
+}
+
+export const VERSION_2_15: RpkgVersion = {
     id: "2.15",
     date: "26 May 2021",
     changelog: (
@@ -930,6 +944,7 @@ export const VERSION_1_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_15,
     VERSION_2_14,
     VERSION_2_13,
     VERSION_2_12,
