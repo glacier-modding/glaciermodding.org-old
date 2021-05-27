@@ -16,7 +16,6 @@ import Header from "../src/Header"
 import { latest, RpkgVersion, versions } from "../src/RpkgVersions"
 import { renderToString } from "react-dom/server"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "@material-ui/icons"
 
 interface DownloadButtonProps {
@@ -139,10 +138,9 @@ export default function Rpkg({ allVersions }) {
                         hosted by Notex.
                     </h2>
 
-                    <Image
+                    <img
                         width={1280}
                         height={800}
-                        layout={"intrinsic"}
                         className="rpkg-image"
                         src={images[image]}
                         alt="The RPKG tool in action."

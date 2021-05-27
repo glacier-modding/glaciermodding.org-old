@@ -30,7 +30,7 @@ export const VERSION_2_15: RpkgVersion = {
                 <ul>
                     <li>
                         Converted to{" "}
-                        <a href="https://github.com/OrfeasZ/ZHMTools/">
+                        <a href="https://github.com/OrfeasZ/ZHMTools">
                             ZHMTools's ResourceLib
                         </a>{" "}
                         for full H2 and H3 support.
