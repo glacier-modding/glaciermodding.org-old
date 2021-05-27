@@ -4,7 +4,6 @@ import React from "react"
 import Header from "../../../src/Header"
 import dynamic from "next/dynamic"
 import Head from "next/head"
-import Link from "next/link"
 
 const XteaImage = dynamic(() => import("../../../src/XteaImage"))
 
@@ -27,11 +26,11 @@ export default function Xtea() {
                     below. Sorry about that.
                 </p>
 
-                <Link href="/xtea/prepatched">
+                <a href="/xtea/prepatched">
                     <h2 className="description" style={{ color: "white", cursor: "pointer" }}>
                         Looking for a version of <code>packagedefinition.txt</code> that is already patched? Click here!
                     </h2>
-                </Link>
+                </a>
 
                 <main className="main"></main>
             </div>
