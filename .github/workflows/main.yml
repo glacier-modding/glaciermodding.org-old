@@ -11,8 +11,8 @@ jobs:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@latest
-      - uses: actions/setup-node@latest
+      - uses: actions/checkout@v2.3.4
+      - uses: actions/setup-node@v2.1.5
         with:
           node-version: "16.x"
       - uses: webfactory/ssh-agent@v0.5.2
