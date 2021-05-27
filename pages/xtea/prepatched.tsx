@@ -23,7 +23,7 @@ export default function Prepatched() {
 
             <main className="main">
                 <h1 className="title">Pre-patched package definitions</h1>
-                <h2 className="description">
+                <h2 className="description no-top">
                     If a mod requires you to patch your <code>packagedefinition.txt</code> file, fear not.
                     Here are some already patched for you to download.
                 </h2>
