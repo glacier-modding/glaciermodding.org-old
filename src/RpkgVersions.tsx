@@ -7,17 +7,44 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.16",
+    date: "29 May 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    Added the funcionality to convert .meta files to .meta.JSON
+                    and vice versa for easy editing of hash dependencies.
+                </li>
+                <ul>
+                    <li>GUI: See new "Utilities" menu.</li>
+                    <li>
+                        CLI: <code>-hash_meta_to_json-json_to_hash_meta</code>{" "}
+                        and <code>-json_to_hash_meta</code>.
+                    </li>
+                </ul>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_15_1: RpkgVersion = {
     id: "2.15.1",
     date: "27 May 2021",
     changelog: (
         <React.Fragment>
             <ul>
                 <li>Revamped Discord Rich Presence integration.</li>
-                <li>Added Discord invite link for the Glacier² Modding server.</li>
-                <li>Fixed RPKG crashing when exiting if Discord Rich Presence was disabled.</li>
+                <li>
+                    Added Discord invite link for the Glacier² Modding server.
+                </li>
+                <li>
+                    Fixed RPKG crashing when exiting if Discord Rich Presence
+                    was disabled.
+                </li>
             </ul>
         </React.Fragment>
-    )
+    ),
 }
 
 export const VERSION_2_15: RpkgVersion = {
@@ -974,6 +1001,7 @@ export const VERSION_1_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_15_1,
     VERSION_2_15,
     VERSION_2_14,
     VERSION_2_13,
