@@ -19,8 +19,8 @@ export const latest: RpkgVersion = {
                 <ul>
                     <li>GUI: See new "Utilities" menu.</li>
                     <li>
-                        CLI: <code>-hash_meta_to_json-json_to_hash_meta</code>{" "}
-                        and <code>-json_to_hash_meta</code>.
+                        CLI: <code>-hash_meta_to_json</code> and{" "}
+                        <code>-json_to_hash_meta</code>.
                     </li>
                 </ul>
             </ul>
