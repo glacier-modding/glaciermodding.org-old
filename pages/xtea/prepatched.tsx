@@ -41,12 +41,6 @@ export default function Prepatched() {
                             <Button variant={"contained"}>Download for 2.72.0</Button>
                         </a>
                     </Grid>
-                    <Grid item xs={3}>
-                        <h3>HITMAN&trade; 2016</h3>
-                        <a href="/prepatched/h2016/packagedefinition.txt" target="_blank" rel="noopener noreferrer" download>
-                            <Button variant={"contained"}>Download for 1.15</Button>
-                        </a>
-                    </Grid>
                 </Grid>
             </main>
         </div>
