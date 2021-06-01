@@ -238,6 +238,20 @@ export const VERSION_2_11_1: RpkgVersion = {
     ),
 }
 
+export const VERSION_2_11: RpkgVersion = {
+    id: "2.11",
+    date: "10 May 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>Transitioned to a higher performance treeview for the main RPKG GUI</li>
+                <li>Fixed an issue with the TEMP editor that caused some TEMPs to not load properly</li>
+                <li>Fixed an issue with the hash depends editor that caused RPKGs with multiple hashes to become malformed</li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
 export const VERSION_2_10: RpkgVersion = {
     id: "2.10",
     date: "10 May 2021",
@@ -1008,6 +1022,7 @@ export const versions: RpkgVersion[] = [
     VERSION_2_12,
     VERSION_2_11_2,
     VERSION_2_11_1,
+    VERSION_2_11,
     VERSION_2_10,
     VERSION_2_9,
     VERSION_2_8,
