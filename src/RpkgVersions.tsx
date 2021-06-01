@@ -47,7 +47,7 @@ export const VERSION_2_15_1: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_15: RpkgVersion = {
+export const VERSION_2_15_0: RpkgVersion = {
     id: "2.15.0",
     date: "26 May 2021",
     changelog: (
@@ -86,7 +86,7 @@ export const VERSION_2_15: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_14: RpkgVersion = {
+export const VERSION_2_14_0: RpkgVersion = {
     id: "2.14.0",
     date: "21 May 2021",
     changelog: (
@@ -119,7 +119,7 @@ export const VERSION_2_14: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_13: RpkgVersion = {
+export const VERSION_2_13_0: RpkgVersion = {
     id: "2.13.0",
     date: "20 May 2021",
     changelog: (
@@ -173,7 +173,7 @@ export const VERSION_2_13: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_12: RpkgVersion = {
+export const VERSION_2_12_0: RpkgVersion = {
     id: "2.12.0",
     date: "19 May 2021",
     changelog: (
@@ -238,7 +238,7 @@ export const VERSION_2_11_1: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_11: RpkgVersion = {
+export const VERSION_2_11_0: RpkgVersion = {
     id: "2.11.0",
     date: "10 May 2021",
     changelog: (
@@ -252,7 +252,7 @@ export const VERSION_2_11: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_10: RpkgVersion = {
+export const VERSION_2_10_0: RpkgVersion = {
     id: "2.10.0",
     date: "10 May 2021",
     changelog: (
@@ -306,7 +306,7 @@ export const VERSION_2_10: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_9: RpkgVersion = {
+export const VERSION_2_9_0: RpkgVersion = {
     id: "2.9.0",
     date: "29 April 2021",
     changelog: (
@@ -366,7 +366,7 @@ export const VERSION_2_9: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_8: RpkgVersion = {
+export const VERSION_2_8_0: RpkgVersion = {
     id: "2.8.0",
     date: "28 April 2021",
     changelog: (
@@ -480,7 +480,7 @@ export const VERSION_2_8: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_7: RpkgVersion = {
+export const VERSION_2_7_0: RpkgVersion = {
     id: "2.7.0",
     date: "18 April 2021",
     changelog: (
@@ -540,7 +540,7 @@ export const VERSION_2_7: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_6: RpkgVersion = {
+export const VERSION_2_6_0: RpkgVersion = {
     id: "2.6.0",
     date: "8 April 2021",
     changelog: (
@@ -598,7 +598,7 @@ export const VERSION_2_6: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_5: RpkgVersion = {
+export const VERSION_2_5_0: RpkgVersion = {
     id: "2.5.0",
     date: "21 March 2021",
     changelog: (
@@ -630,7 +630,7 @@ export const VERSION_2_5: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_4: RpkgVersion = {
+export const VERSION_2_4_0: RpkgVersion = {
     id: "2.4.0",
     date: "19 March 2021",
     changelog: (
@@ -650,7 +650,7 @@ export const VERSION_2_4: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_31: RpkgVersion = {
+export const VERSION_2_3_1: RpkgVersion = {
     id: "2.3.1",
     date: "6 March 2021",
     changelog: (
@@ -663,7 +663,7 @@ export const VERSION_2_31: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_3: RpkgVersion = {
+export const VERSION_2_3_0: RpkgVersion = {
     id: "2.3.0",
     date: "3 March 2021",
     changelog: (
@@ -680,7 +680,7 @@ export const VERSION_2_3: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_2: RpkgVersion = {
+export const VERSION_2_2_0: RpkgVersion = {
     id: "2.2.0",
     date: "28 February 2021",
     changelog: (
@@ -693,7 +693,7 @@ export const VERSION_2_2: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_1: RpkgVersion = {
+export const VERSION_2_1_0: RpkgVersion = {
     id: "2.1.0",
     date: "26 February 2021",
     changelog: (
@@ -729,7 +729,7 @@ export const VERSION_2_1: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_01: RpkgVersion = {
+export const VERSION_2_0_1: RpkgVersion = {
     id: "2.0.1",
     date: "23 February 2021",
     changelog: (
@@ -764,7 +764,7 @@ export const VERSION_2_01: RpkgVersion = {
     ),
 }
 
-export const VERSION_2_0: RpkgVersion = {
+export const VERSION_2_0_0: RpkgVersion = {
     id: "2.0.0",
     date: "22 February 2021",
     changelog: (
@@ -815,7 +815,7 @@ export const VERSION_2_0: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_3: RpkgVersion = {
+export const VERSION_1_3_0: RpkgVersion = {
     id: "1.3.0",
     date: "4 February 2021",
     changelog: (
@@ -859,7 +859,7 @@ export const VERSION_1_3: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_21: RpkgVersion = {
+export const VERSION_1_2_1: RpkgVersion = {
     id: "1.2.1",
     date: "31 January 2021",
     changelog: (
@@ -874,7 +874,7 @@ export const VERSION_1_21: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_2: RpkgVersion = {
+export const VERSION_1_2_0: RpkgVersion = {
     id: "1.2.0",
     date: "30 January 2021",
     changelog: (
@@ -897,7 +897,7 @@ export const VERSION_1_2: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_11: RpkgVersion = {
+export const VERSION_1_1_1: RpkgVersion = {
     id: "1.1.1",
     date: "29 January 2021",
     changelog: (
@@ -917,7 +917,7 @@ export const VERSION_1_11: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_1: RpkgVersion = {
+export const VERSION_1_1_0: RpkgVersion = {
     id: "1.1.0",
     date: "28 January 2021",
     changelog: (
@@ -951,7 +951,7 @@ export const VERSION_1_1: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_03: RpkgVersion = {
+export const VERSION_1_0_3: RpkgVersion = {
     id: "1.0.3",
     date: "25 January 2021",
     changelog: (
@@ -966,7 +966,7 @@ export const VERSION_1_03: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_02: RpkgVersion = {
+export const VERSION_1_0_2: RpkgVersion = {
     id: "1.0.2",
     date: "25 January 2021",
     changelog: (
@@ -986,7 +986,7 @@ export const VERSION_1_02: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_01: RpkgVersion = {
+export const VERSION_1_0_1: RpkgVersion = {
     id: "1.0.1",
     date: "24 January 2021",
     changelog: (
@@ -1001,7 +1001,7 @@ export const VERSION_1_01: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_0: RpkgVersion = {
+export const VERSION_1_0_0: RpkgVersion = {
     id: "1.0.0",
     date: "24 January 2021",
     changelog: (
@@ -1016,33 +1016,33 @@ export const VERSION_1_0: RpkgVersion = {
 export const versions: RpkgVersion[] = [
     latest,
     VERSION_2_15_1,
-    VERSION_2_15,
-    VERSION_2_14,
-    VERSION_2_13,
-    VERSION_2_12,
+    VERSION_2_15_0,
+    VERSION_2_14_0,
+    VERSION_2_13_0,
+    VERSION_2_12_0,
     VERSION_2_11_2,
     VERSION_2_11_1,
-    VERSION_2_11,
-    VERSION_2_10,
-    VERSION_2_9,
-    VERSION_2_8,
-    VERSION_2_7,
-    VERSION_2_6,
-    VERSION_2_5,
-    VERSION_2_4,
-    VERSION_2_31,
-    VERSION_2_3,
-    VERSION_2_2,
-    VERSION_2_1,
-    VERSION_2_01,
-    VERSION_2_0,
-    VERSION_1_3,
-    VERSION_1_21,
-    VERSION_1_2,
-    VERSION_1_11,
-    VERSION_1_1,
-    VERSION_1_03,
-    VERSION_1_02,
-    VERSION_1_01,
-    VERSION_1_0,
+    VERSION_2_11_0,
+    VERSION_2_10_0,
+    VERSION_2_9_0,
+    VERSION_2_8_0,
+    VERSION_2_7_0,
+    VERSION_2_6_0,
+    VERSION_2_5_0,
+    VERSION_2_4_0,
+    VERSION_2_3_1,
+    VERSION_2_3_0,
+    VERSION_2_2_0,
+    VERSION_2_1_0,
+    VERSION_2_0_1,
+    VERSION_2_0_0,
+    VERSION_1_3_0,
+    VERSION_1_2_1,
+    VERSION_1_2_0,
+    VERSION_1_1_1,
+    VERSION_1_1_0,
+    VERSION_1_0_3,
+    VERSION_1_0_2,
+    VERSION_1_0_1,
+    VERSION_1_0_0,
 ]
