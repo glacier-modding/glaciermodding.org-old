@@ -845,8 +845,8 @@ export const VERSION_1_3: RpkgVersion = {
     ),
 }
 
-export const VERSION_1_22: RpkgVersion = {
-    id: "1.22",
+export const VERSION_1_21: RpkgVersion = {
+    id: "1.21",
     date: "31 January 2021",
     changelog: (
         <React.Fragment>
@@ -1022,7 +1022,7 @@ export const versions: RpkgVersion[] = [
     VERSION_2_01,
     VERSION_2_0,
     VERSION_1_3,
-    VERSION_1_22,
+    VERSION_1_21,
     VERSION_1_2,
     VERSION_1_11,
     VERSION_1_1,
