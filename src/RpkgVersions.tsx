@@ -99,7 +99,7 @@ export const VERSION_2_14_0: RpkgVersion = {
                 </li>
                 <li>
                     Added a check for TEMP and TBLU mismatched subEntities
-                    counts when loading the Entity/Brick (TEMP/TBLU ) Editor,
+                    counts when loading the Entity/Brick (TEMP/TBLU) Editor,
                     and if mismatched a warning is displayed
                 </li>
                 <li>
@@ -297,7 +297,7 @@ export const VERSION_2_10_0: RpkgVersion = {
                     </ul>
                 </li>
                 <li>
-                    Changed <code>-extract_direct_hash_depends</code> to
+                    Changed <code>-extract_direct_hash_depends</code> to{" "}
                     <code>-extract_direct_hash_depends_from</code> for
                     uniformity
                 </li>
@@ -349,7 +349,7 @@ export const VERSION_2_9_0: RpkgVersion = {
                                     <code>
                                         -extract_all_prim_model_of_temp_from
                                     </code>{" "}
-                                    and
+                                    and{" "}
                                     <code>-rebuild_prim_model_in</code>.
                                 </li>
                             </ul>
@@ -424,7 +424,7 @@ export const VERSION_2_8_0: RpkgVersion = {
                                     <ul>
                                         <li>
                                             <code>-extract_prim_from</code> and{" "}
-                                            <code>rebuild_prim_in</code>.
+                                            <code>-rebuild_prim_in</code>.
                                         </li>
                                     </ul>
                                 </li>
