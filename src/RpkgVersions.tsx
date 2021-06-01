@@ -7,7 +7,7 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
-    id: "2.16",
+    id: "2.16.0",
     date: "29 May 2021",
     changelog: (
         <React.Fragment>
@@ -48,7 +48,7 @@ export const VERSION_2_15_1: RpkgVersion = {
 }
 
 export const VERSION_2_15: RpkgVersion = {
-    id: "2.15",
+    id: "2.15.0",
     date: "26 May 2021",
     changelog: (
         <React.Fragment>
@@ -87,7 +87,7 @@ export const VERSION_2_15: RpkgVersion = {
 }
 
 export const VERSION_2_14: RpkgVersion = {
-    id: "2.14",
+    id: "2.14.0",
     date: "21 May 2021",
     changelog: (
         <React.Fragment>
@@ -120,7 +120,7 @@ export const VERSION_2_14: RpkgVersion = {
 }
 
 export const VERSION_2_13: RpkgVersion = {
-    id: "2.13",
+    id: "2.13.0",
     date: "20 May 2021",
     changelog: (
         <React.Fragment>
@@ -174,7 +174,7 @@ export const VERSION_2_13: RpkgVersion = {
 }
 
 export const VERSION_2_12: RpkgVersion = {
-    id: "2.12",
+    id: "2.12.0",
     date: "19 May 2021",
     changelog: (
         <React.Fragment>
@@ -239,7 +239,7 @@ export const VERSION_2_11_1: RpkgVersion = {
 }
 
 export const VERSION_2_11: RpkgVersion = {
-    id: "2.11",
+    id: "2.11.0",
     date: "10 May 2021",
     changelog: (
         <React.Fragment>
@@ -253,7 +253,7 @@ export const VERSION_2_11: RpkgVersion = {
 }
 
 export const VERSION_2_10: RpkgVersion = {
-    id: "2.10",
+    id: "2.10.0",
     date: "10 May 2021",
     changelog: (
         <React.Fragment>
@@ -307,7 +307,7 @@ export const VERSION_2_10: RpkgVersion = {
 }
 
 export const VERSION_2_9: RpkgVersion = {
-    id: "2.9",
+    id: "2.9.0",
     date: "29 April 2021",
     changelog: (
         <React.Fragment>
@@ -367,7 +367,7 @@ export const VERSION_2_9: RpkgVersion = {
 }
 
 export const VERSION_2_8: RpkgVersion = {
-    id: "2.8",
+    id: "2.8.0",
     date: "28 April 2021",
     changelog: (
         <React.Fragment>
@@ -481,7 +481,7 @@ export const VERSION_2_8: RpkgVersion = {
 }
 
 export const VERSION_2_7: RpkgVersion = {
-    id: "2.7",
+    id: "2.7.0",
     date: "18 April 2021",
     changelog: (
         <React.Fragment>
@@ -541,7 +541,7 @@ export const VERSION_2_7: RpkgVersion = {
 }
 
 export const VERSION_2_6: RpkgVersion = {
-    id: "2.6",
+    id: "2.6.0",
     date: "8 April 2021",
     changelog: (
         <React.Fragment>
@@ -599,7 +599,7 @@ export const VERSION_2_6: RpkgVersion = {
 }
 
 export const VERSION_2_5: RpkgVersion = {
-    id: "2.5",
+    id: "2.5.0",
     date: "21 March 2021",
     changelog: (
         <React.Fragment>
@@ -631,7 +631,7 @@ export const VERSION_2_5: RpkgVersion = {
 }
 
 export const VERSION_2_4: RpkgVersion = {
-    id: "2.4",
+    id: "2.4.0",
     date: "19 March 2021",
     changelog: (
         <React.Fragment>
@@ -651,7 +651,7 @@ export const VERSION_2_4: RpkgVersion = {
 }
 
 export const VERSION_2_31: RpkgVersion = {
-    id: "2.31",
+    id: "2.3.1",
     date: "6 March 2021",
     changelog: (
         <React.Fragment>
@@ -664,7 +664,7 @@ export const VERSION_2_31: RpkgVersion = {
 }
 
 export const VERSION_2_3: RpkgVersion = {
-    id: "2.3",
+    id: "2.3.0",
     date: "3 March 2021",
     changelog: (
         <React.Fragment>
@@ -681,7 +681,7 @@ export const VERSION_2_3: RpkgVersion = {
 }
 
 export const VERSION_2_2: RpkgVersion = {
-    id: "2.2",
+    id: "2.2.0",
     date: "28 February 2021",
     changelog: (
         <React.Fragment>
@@ -694,7 +694,7 @@ export const VERSION_2_2: RpkgVersion = {
 }
 
 export const VERSION_2_1: RpkgVersion = {
-    id: "2.1",
+    id: "2.1.0",
     date: "26 February 2021",
     changelog: (
         <React.Fragment>
@@ -730,7 +730,7 @@ export const VERSION_2_1: RpkgVersion = {
 }
 
 export const VERSION_2_01: RpkgVersion = {
-    id: "2.01",
+    id: "2.0.1",
     date: "23 February 2021",
     changelog: (
         <React.Fragment>
@@ -765,7 +765,7 @@ export const VERSION_2_01: RpkgVersion = {
 }
 
 export const VERSION_2_0: RpkgVersion = {
-    id: "2.0",
+    id: "2.0.0",
     date: "22 February 2021",
     changelog: (
         <React.Fragment>
@@ -816,7 +816,7 @@ export const VERSION_2_0: RpkgVersion = {
 }
 
 export const VERSION_1_3: RpkgVersion = {
-    id: "1.3",
+    id: "1.3.0",
     date: "4 February 2021",
     changelog: (
         <React.Fragment>
@@ -860,7 +860,7 @@ export const VERSION_1_3: RpkgVersion = {
 }
 
 export const VERSION_1_21: RpkgVersion = {
-    id: "1.21",
+    id: "1.2.1",
     date: "31 January 2021",
     changelog: (
         <React.Fragment>
@@ -875,7 +875,7 @@ export const VERSION_1_21: RpkgVersion = {
 }
 
 export const VERSION_1_2: RpkgVersion = {
-    id: "1.2",
+    id: "1.2.0",
     date: "30 January 2021",
     changelog: (
         <React.Fragment>
@@ -898,7 +898,7 @@ export const VERSION_1_2: RpkgVersion = {
 }
 
 export const VERSION_1_11: RpkgVersion = {
-    id: "1.11",
+    id: "1.1.1",
     date: "29 January 2021",
     changelog: (
         <React.Fragment>
@@ -918,7 +918,7 @@ export const VERSION_1_11: RpkgVersion = {
 }
 
 export const VERSION_1_1: RpkgVersion = {
-    id: "1.1",
+    id: "1.1.0",
     date: "28 January 2021",
     changelog: (
         <React.Fragment>
@@ -952,7 +952,7 @@ export const VERSION_1_1: RpkgVersion = {
 }
 
 export const VERSION_1_03: RpkgVersion = {
-    id: "1.03",
+    id: "1.0.3",
     date: "25 January 2021",
     changelog: (
         <React.Fragment>
@@ -967,7 +967,7 @@ export const VERSION_1_03: RpkgVersion = {
 }
 
 export const VERSION_1_02: RpkgVersion = {
-    id: "1.02",
+    id: "1.0.2",
     date: "25 January 2021",
     changelog: (
         <React.Fragment>
@@ -987,7 +987,7 @@ export const VERSION_1_02: RpkgVersion = {
 }
 
 export const VERSION_1_01: RpkgVersion = {
-    id: "1.01",
+    id: "1.0.1",
     date: "24 January 2021",
     changelog: (
         <React.Fragment>
@@ -1002,7 +1002,7 @@ export const VERSION_1_01: RpkgVersion = {
 }
 
 export const VERSION_1_0: RpkgVersion = {
-    id: "1.0",
+    id: "1.0.0",
     date: "24 January 2021",
     changelog: (
         <React.Fragment>
