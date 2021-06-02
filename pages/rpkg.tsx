@@ -80,6 +80,16 @@ function DownloadSrcButton({ versionId }: DownloadButtonProps) {
     )
 }
 
+function DownloadZHMToolsButton({ versionId }: DownloadButtonProps) {
+    return (
+        <Link href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/ZHMTools-src.zip`}>
+            <Button variant={"contained"} color={"primary"}>
+                Download ZHMTools Source
+            </Button>
+        </Link>
+    )
+}
+
 export async function getStaticProps() {
     // we should probably check why these 2 constants need to
     // be out of hooks
@@ -196,7 +206,7 @@ export default function Rpkg({ allVersions }) {
                             </AccordionSummary>
                             <AccordionDetails className="changelog">
                                 <div>
-                                    <p>Released {v.date}.</p>
+                                    <p>Released {v.date}</p>
                                     <div
                                         dangerouslySetInnerHTML={{
                                             __html: v.changelog,
@@ -207,6 +217,7 @@ export default function Rpkg({ allVersions }) {
                             <AccordionActions>
                                 <DownloadButton versionId={v.id} />
                                 <DownloadSrcButton versionId={v.id} />
+                                {v.zhmtools && <DownloadZHMToolsButton versionId={v.id} />}
                             </AccordionActions>
                         </Accordion>
                     ))}

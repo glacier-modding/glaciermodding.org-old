@@ -4,6 +4,7 @@ export interface RpkgVersion {
     id: string
     changelog: React.ReactElement
     date: string
+    zhmtools?: boolean
 }
 
 export const latest: RpkgVersion = {
@@ -117,6 +118,7 @@ export const VERSION_2_14_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    zhmtools: true,
 }
 
 export const VERSION_2_13_0: RpkgVersion = {
@@ -171,6 +173,7 @@ export const VERSION_2_13_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    zhmtools: true,
 }
 
 export const VERSION_2_12_0: RpkgVersion = {
@@ -202,6 +205,7 @@ export const VERSION_2_12_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    zhmtools: true,
 }
 
 export const VERSION_2_11_2: RpkgVersion = {
