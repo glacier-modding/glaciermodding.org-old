@@ -62,7 +62,7 @@ const darkTheme = createMuiTheme({
 
 function DownloadButton({ versionId }: DownloadButtonProps) {
     return (
-        <Link href={`/tools/rpkg/rpkg_v${versionId}.zip`}>
+        <Link href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}.zip`}>
             <Button variant={"contained"} color={"secondary"}>
                 Download v{versionId}
             </Button>
@@ -72,7 +72,7 @@ function DownloadButton({ versionId }: DownloadButtonProps) {
 
 function DownloadSrcButton({ versionId }: DownloadButtonProps) {
     return (
-        <Link href={`/tools/rpkg/rpkg_v${versionId}-src.zip`}>
+        <Link href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}-src.zip`}>
             <Button variant={"contained"} color={"primary"}>
                 Download Source
             </Button>
