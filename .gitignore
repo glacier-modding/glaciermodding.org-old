@@ -36,3 +36,4 @@ public/assets
 
 .yarn/install-state.gz
 .yarn/cache
+.yarn/unplugged
