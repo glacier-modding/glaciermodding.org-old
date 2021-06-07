@@ -26,8 +26,13 @@ export default function Xtea() {
                     below. Sorry about that.
                 </p>
 
-                <a href="/xtea/prepatched" className="description" style={{ color: "white", cursor: "pointer" }}>
-                    Looking for a version of <code>packagedefinition.txt</code> that is already patched? Click here!
+                <a
+                    href="/xtea/prepatched"
+                    className="description"
+                    style={{ color: "white", cursor: "pointer" }}
+                >
+                    Looking for a version of <code>packagedefinition.txt</code>{" "}
+                    that is already patched? Click here!
                 </a>
 
                 <main className="main"></main>

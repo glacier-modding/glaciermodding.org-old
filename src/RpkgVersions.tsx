@@ -100,8 +100,8 @@ export const VERSION_2_14_0: RpkgVersion = {
                 </li>
                 <li>
                     Added a check for TEMP and TBLU mismatched subEntities
-                    counts when loading the Entity/Brick (TEMP/TBLU) Editor,
-                    and if mismatched a warning is displayed
+                    counts when loading the Entity/Brick (TEMP/TBLU) Editor, and
+                    if mismatched a warning is displayed
                 </li>
                 <li>
                     Added hash list checking in the Hash Calculator to let you
@@ -248,9 +248,18 @@ export const VERSION_2_11_0: RpkgVersion = {
     changelog: (
         <React.Fragment>
             <ul>
-                <li>Transitioned to a higher performance treeview for the main RPKG GUI</li>
-                <li>Fixed an issue with the TEMP editor that caused some TEMPs to not load properly</li>
-                <li>Fixed an issue with the hash depends editor that caused RPKGs with multiple hashes to become malformed</li>
+                <li>
+                    Transitioned to a higher performance treeview for the main
+                    RPKG GUI
+                </li>
+                <li>
+                    Fixed an issue with the TEMP editor that caused some TEMPs
+                    to not load properly
+                </li>
+                <li>
+                    Fixed an issue with the hash depends editor that caused
+                    RPKGs with multiple hashes to become malformed
+                </li>
             </ul>
         </React.Fragment>
     ),
@@ -353,8 +362,7 @@ export const VERSION_2_9_0: RpkgVersion = {
                                     <code>
                                         -extract_all_prim_model_of_temp_from
                                     </code>{" "}
-                                    and{" "}
-                                    <code>-rebuild_prim_model_in</code>.
+                                    and <code>-rebuild_prim_model_in</code>.
                                 </li>
                             </ul>
                         </li>

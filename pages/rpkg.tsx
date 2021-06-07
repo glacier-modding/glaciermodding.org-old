@@ -62,7 +62,9 @@ const darkTheme = createMuiTheme({
 
 function DownloadButton({ versionId }: DownloadButtonProps) {
     return (
-        <Link href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}.zip`}>
+        <Link
+            href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}.zip`}
+        >
             <Button variant={"contained"} color={"secondary"}>
                 Download v{versionId}
             </Button>
@@ -72,7 +74,9 @@ function DownloadButton({ versionId }: DownloadButtonProps) {
 
 function DownloadSrcButton({ versionId }: DownloadButtonProps) {
     return (
-        <Link href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}-src.zip`}>
+        <Link
+            href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}-src.zip`}
+        >
             <Button variant={"contained"} color={"primary"}>
                 Download Source
             </Button>
@@ -82,7 +86,9 @@ function DownloadSrcButton({ versionId }: DownloadButtonProps) {
 
 function DownloadZHMToolsButton({ versionId }: DownloadButtonProps) {
     return (
-        <Link href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/ZHMTools-src.zip`}>
+        <Link
+            href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/ZHMTools-src.zip`}
+        >
             <Button variant={"contained"} color={"primary"}>
                 Download ZHMTools Source
             </Button>
@@ -217,7 +223,9 @@ export default function Rpkg({ allVersions }) {
                             <AccordionActions>
                                 <DownloadButton versionId={v.id} />
                                 <DownloadSrcButton versionId={v.id} />
-                                {v.zhmtools && <DownloadZHMToolsButton versionId={v.id} />}
+                                {v.zhmtools && (
+                                    <DownloadZHMToolsButton versionId={v.id} />
+                                )}
                             </AccordionActions>
                         </Accordion>
                     ))}
