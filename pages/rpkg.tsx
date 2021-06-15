@@ -16,7 +16,7 @@ import Header from "../src/Header"
 import { latest, RpkgVersion, versions } from "../src/RpkgVersions"
 import { renderToString } from "react-dom/server"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import { ChevronLeft, ChevronRight } from "@material-ui/icons"
+import { ChevronLeft, ChevronRight, GetApp } from "@material-ui/icons"
 
 interface DownloadButtonProps {
     versionId: string
@@ -65,7 +65,11 @@ function DownloadButton({ versionId }: DownloadButtonProps) {
         <Link
             href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}.zip`}
         >
-            <Button variant={"contained"} color={"secondary"}>
+            <Button
+                variant={"contained"}
+                color={"secondary"}
+                startIcon={<GetApp />}
+            >
                 Download v{versionId}
             </Button>
         </Link>
@@ -77,7 +81,11 @@ function DownloadSrcButton({ versionId }: DownloadButtonProps) {
         <Link
             href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}-src.zip`}
         >
-            <Button variant={"contained"} color={"primary"}>
+            <Button
+                variant={"contained"}
+                color={"primary"}
+                startIcon={<GetApp />}
+            >
                 Download Source
             </Button>
         </Link>
@@ -89,7 +97,11 @@ function DownloadZHMToolsButton({ versionId }: DownloadButtonProps) {
         <Link
             href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/ZHMTools-src.zip`}
         >
-            <Button variant={"contained"} color={"primary"}>
+            <Button
+                variant={"contained"}
+                color={"primary"}
+                startIcon={<GetApp />}
+            >
                 Download ZHMTools Source
             </Button>
         </Link>
