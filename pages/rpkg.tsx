@@ -34,7 +34,7 @@ const darkTheme = createMuiTheme({
     },
     typography: {
         fontFamily:
-            "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
+            "Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
     },
     overrides: {
         // fix inconsistent widths
