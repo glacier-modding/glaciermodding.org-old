@@ -121,7 +121,7 @@ export default function Rpkg({ allVersions }) {
         React.useState<boolean>(true)
     const [image, setImage] = React.useState<number>(0)
     const images = [
-        "/rpkg-in-action.png",
+        "/rpkg-1.png",
         "/rpkg-2.png",
         "/rpkg-3.png",
         "/rpkg-4.png",
