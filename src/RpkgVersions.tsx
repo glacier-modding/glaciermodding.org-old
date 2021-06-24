@@ -14,7 +14,7 @@ export const latest: RpkgVersion = {
         <React.Fragment>
             <ul>
                 <li>
-                    Added the funcionality to convert .meta files to .meta.JSON
+                    Added the functionality to convert .meta files to .meta.JSON
                     and vice versa for easy editing of hash dependencies.
                 </li>
                 <ul>
@@ -96,24 +96,24 @@ export const VERSION_2_14_0: RpkgVersion = {
                 <li>
                     Updated ResourceTool by adding subEntities counts for
                     generated TEMP and TBLU files to not only mimic IOI's TEMP
-                    and TBLU files, but to help RPKG with version checking
+                    and TBLU files, but to help RPKG with version checking.
                 </li>
                 <li>
                     Added a check for TEMP and TBLU mismatched subEntities
                     counts when loading the Entity/Brick (TEMP/TBLU) Editor, and
-                    if mismatched a warning is displayed
+                    if mismatched a warning is displayed.
                 </li>
                 <li>
                     Added hash list checking in the Hash Calculator to let you
-                    know if a given hash is in the hash list or not
+                    know if a given hash is in the hash list or not.
                 </li>
                 <li>
                     Fixed an issue where TEMP and TBLU files which have a
-                    mismatched subEntities count would cause RPKG to crash
+                    mismatched subEntities count would cause RPKG to crash.
                 </li>
                 <li>
                     Fixed an issue where RPKG would halt or crash due to
-                    blank/empty H2 RPKG files
+                    blank/empty H2 RPKG files.
                 </li>
             </ul>
         </React.Fragment>
@@ -145,19 +145,36 @@ export const VERSION_2_13_0: RpkgVersion = {
                         </li>
                         <li>
                             The Entity/Brick (TEMP/TBLU) Editor now allows
-                            editing of the TEMP’s:
+                            editing of the TEMP's:
                             <ul>
-                                <li>subEntities: propertyValues</li>
-                                <li>subEntities: postInitPropertyValues</li>
                                 <li>
-                                    subEntities: platformSpecificPropertyValues
+                                    <code>subEntities</code>:{" "}
+                                    <code>propertyValues</code>
                                 </li>
-                                <li>subType</li>
-                                <li>blueprintIndexInResourceHeader</li>
-                                <li>rootEntityIndex</li>
-                                <li>propertyOverrides</li>
                                 <li>
-                                    externalSceneTypeIndicesInResourceHeader
+                                    <code>subEntities</code>:{" "}
+                                    <code>postInitPropertyValues</code>
+                                </li>
+                                <li>
+                                    <code>subEntities</code>:{" "}
+                                    <code>platformSpecificPropertyValues</code>
+                                </li>
+                                <li>
+                                    <code>subType</code>
+                                </li>
+                                <li>
+                                    <code>blueprintIndexInResourceHeader</code>
+                                </li>
+                                <li>
+                                    <code>rootEntityIndex</code>
+                                </li>
+                                <li>
+                                    <code>propertyOverrides</code>
+                                </li>
+                                <li>
+                                    <code>
+                                        externalSceneTypeIndicesInResourceHeader
+                                    </code>
                                 </li>
                             </ul>
                         </li>
@@ -165,10 +182,10 @@ export const VERSION_2_13_0: RpkgVersion = {
                 </li>
                 <li>
                     Implemented a single progress window/bar when importing all
-                    the RPKGs in a folder
+                    the RPKGs in a folder.
                 </li>
                 <li>
-                    Added multi-line IOI hash calculator function in the GUI
+                    Added multi-line IOI hash calculator function in the GUI.
                 </li>
             </ul>
         </React.Fragment>
@@ -231,11 +248,11 @@ export const VERSION_2_11_1: RpkgVersion = {
             <ul>
                 <li>
                     Fixed a texture color issue involving the extraction and
-                    rebuilding of BC7 (0x5A) type textures
+                    rebuilding of BC7 (0x5A) type textures.
                 </li>
                 <li>
                     Fixed an issue where the hash depends button wasn't working
-                    properly on hashes found via the search function
+                    properly on hashes found via the search function.
                 </li>
             </ul>
         </React.Fragment>
@@ -250,15 +267,15 @@ export const VERSION_2_11_0: RpkgVersion = {
             <ul>
                 <li>
                     Transitioned to a higher performance treeview for the main
-                    RPKG GUI
+                    RPKG GUI.
                 </li>
                 <li>
                     Fixed an issue with the TEMP editor that caused some TEMPs
-                    to not load properly
+                    to not load properly.
                 </li>
                 <li>
                     Fixed an issue with the hash depends editor that caused
-                    RPKGs with multiple hashes to become malformed
+                    RPKGs with multiple hashes to become malformed.
                 </li>
             </ul>
         </React.Fragment>
@@ -312,7 +329,7 @@ export const VERSION_2_10_0: RpkgVersion = {
                 <li>
                     Changed <code>-extract_direct_hash_depends</code> to{" "}
                     <code>-extract_direct_hash_depends_from</code> for
-                    uniformity
+                    uniformity.
                 </li>
             </ul>
         </React.Fragment>
@@ -336,9 +353,9 @@ export const VERSION_2_9_0: RpkgVersion = {
                                     <ul>
                                         <li>
                                             Right click a TEMP hash and select
-                                            “Extract PRIM Models Linked To
+                                            "Extract PRIM Models Linked To
                                             00123456789ABCDE.TEMP to GLB/TGA
-                                            file(s)”.
+                                            file(s)".
                                         </li>
                                     </ul>
                                 </li>
@@ -346,8 +363,8 @@ export const VERSION_2_9_0: RpkgVersion = {
                                     Reimporting:
                                     <ul>
                                         <li>
-                                            Rebuild menu: “Rebuild Primitive
-                                            Models (PRIM/TEXT/TEXD) From Folder”
+                                            Rebuild menu: "Rebuild Primitive
+                                            Models (PRIM/TEXT/TEXD) From Folder"
                                             (RPKG(s) archive(s) will also
                                             automatically generate).
                                         </li>
@@ -397,8 +414,8 @@ export const VERSION_2_8_0: RpkgVersion = {
                                     <ul>
                                         <li>
                                             Right click a PRIM hash and select
-                                            &quot;Extract 00123456789ABCDE.PRIM
-                                            model to GLB/TGA file(s)&quot;.
+                                            "Extract 00123456789ABCDE.PRIM model
+                                            to GLB/TGA file(s)".
                                         </li>
                                     </ul>
                                 </li>
@@ -509,7 +526,7 @@ export const VERSION_2_7_0: RpkgVersion = {
                                     <ul>
                                         <li>
                                             Mass export or right click an
-                                            individual TEXT hash
+                                            individual TEXT hash.
                                         </li>
                                     </ul>
                                 </li>
@@ -518,11 +535,11 @@ export const VERSION_2_7_0: RpkgVersion = {
                                     <ul>
                                         <li>
                                             Rebuild menu (RPKG(s) archive(s)
-                                            will also automatically generate)
+                                            will also automatically generate.)
                                         </li>
                                     </ul>
                                 </li>
-                                <li>Texture viewer for TEXT hashes</li>
+                                <li>Texture viewer for TEXT hashes.</li>
                             </ul>
                         </li>
                         <li>
@@ -542,11 +559,11 @@ export const VERSION_2_7_0: RpkgVersion = {
                     <ul>
                         <li>
                             Search feature (Bricks will load slower initially
-                            now)
+                            now.)
                         </li>
                     </ul>
                 </li>
-                <li>Fixed bug with rebuilding GFXF files</li>
+                <li>Fixed bug with rebuilding GFXF files.</li>
             </ul>
         </React.Fragment>
     ),
@@ -563,23 +580,23 @@ export const VERSION_2_6_0: RpkgVersion = {
                     <ul>
                         <li>
                             Multiple bricks now load if the main TEMP depends on
-                            them
+                            them.
                         </li>
                         <li>
                             Recursive TEMP dependencies
                             <ul>
                                 <li>
                                     Editor keeps track of what TEMPs you have
-                                    edited
+                                    edited.
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            H1 &amp; H2 support for entity/brick (TEMP) editing
+                            H1 &amp; H2 support for entity/brick (TEMP) editing.
                         </li>
                         <li>
                             Fixed ZString bug that caused strings with commas in
-                            them to crash RPKG
+                            them to crash RPKG.
                         </li>
                     </ul>
                 </li>
@@ -592,19 +609,19 @@ export const VERSION_2_6_0: RpkgVersion = {
                                 <li>
                                     Either by right clicking a PRIM hash or
                                     right clicking a TEMP hash that has PRIM
-                                    dependencies
+                                    dependencies.
                                 </li>
                                 <li>
                                     LODs are parsed and will only export the
-                                    highest resolution ones
+                                    highest resolution ones.
                                 </li>
-                                <li>No bone or texture support yet</li>
+                                <li>No bone or texture support yet.</li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li>Added JSON viewer for JSON hashes</li>
-                <li>Improved speed of loading RPKGs</li>
+                <li>Added JSON viewer for JSON hashes.</li>
+                <li>Improved speed of loading RPKGs.</li>
             </ul>
         </React.Fragment>
     ),
@@ -622,21 +639,21 @@ export const VERSION_2_5_0: RpkgVersion = {
                     <ul>
                         <li>
                             <code>-extract_prim_to_obj_from</code> command in
-                            the CLI or you can use the GUI
+                            the CLI or you can use the GUI.
                         </li>
                     </ul>
                 </li>
                 <li>
                     HITMAN 3:
                     <ul>
-                        <li>Added: enum support for brick files</li>
+                        <li>Added: enum support for brick files.</li>
                         <li>
                             Added: export all global entity coords to CSV file
-                            function
+                            function.
                         </li>
                     </ul>
                 </li>
-                <li>Fixed hash depends showing duplicate hashes</li>
+                <li>Fixed hash depends showing duplicate hashes.</li>
             </ul>
         </React.Fragment>
     ),
@@ -650,13 +667,13 @@ export const VERSION_2_4_0: RpkgVersion = {
             <ul>
                 <li>
                     HITMAN 3: Implemented entity/brick (TEMP) file editing
-                    (accessed by right clicking on TEMP files)
+                    (accessed by right clicking on TEMP files.)
                 </li>
                 <li>
                     Added IOI paths to <code>-hash_depends</code> command line
-                    argument
+                    argument.
                 </li>
-                <li>Fixed H1 issue again</li>
+                <li>Fixed H1 issue again.</li>
             </ul>
         </React.Fragment>
     ),
@@ -668,8 +685,8 @@ export const VERSION_2_3_1: RpkgVersion = {
     changelog: (
         <React.Fragment>
             <ul>
-                <li>Fixed GFXF rebuilding if the size is different</li>
-                <li>Fixed bug with Hitman 2016 RPKGs</li>
+                <li>Fixed GFXF rebuilding if the size is different.</li>
+                <li>Fixed bug with Hitman 2016 RPKGs.</li>
             </ul>
         </React.Fragment>
     ),
@@ -721,20 +738,20 @@ export const VERSION_2_1_0: RpkgVersion = {
                 </li>
                 <li>
                     Fixed an issue where the folder selection dialog appeared
-                    after clicking cancel on the right click popup menu
+                    after clicking cancel on the right click popup menu.
                 </li>
-                <li>Added a horizontal scroll bar to the Details section</li>
+                <li>Added a horizontal scroll bar to the Details section.</li>
                 <li>
                     The hash details now displays the known IOI string for each
-                    known hash
+                    known hash.
                 </li>
                 <li>
                     Added extra error outputs for the localization rebuilding
-                    functions when malformed JSONs are input
+                    functions when malformed JSONs are input.
                 </li>
                 <li>
                     Added patch archive deletion list for deleted hashes in the
-                    &ldquo;Details&rdquo; view for patch archives
+                    &ldquo;Details&rdquo; view for patch archives.
                 </li>
             </ul>
         </React.Fragment>
@@ -749,27 +766,27 @@ export const VERSION_2_0_1: RpkgVersion = {
             <ul>
                 <li>
                     Added roughly 15k new hashes to the hash list thanks to
-                    grappigegovert
+                    grappigegovert.
                 </li>
                 <li>
                     Fixed issue with the <code>-hash_probe</code> function where
-                    output was duplicated when used with multiple filters
+                    output was duplicated when used with multiple filters.
                 </li>
                 <li>
                     Added new <code>-extract_direct_hash_depends</code> function
-                    that extracts direct depends to files and meta files
+                    that extracts direct depends to files and meta files.
                 </li>
                 <li>
                     Fixed issue with RPKG Details tab reporting the wrong number
-                    of hashes and total hash sizes for RPKGs
+                    of hashes and total hash sizes for RPKGs.
                 </li>
                 <li>
                     Changed the default starting color theme to Dark/Red instead
-                    of Light/Blue
+                    of Light/Blue.
                 </li>
                 <li>
                     Added natural sorting for the RPKG archives when importing
-                    by folder or mass extraction
+                    by folder or mass extraction.
                 </li>
             </ul>
         </React.Fragment>
@@ -807,11 +824,11 @@ export const VERSION_2_0_0: RpkgVersion = {
                 </li>
                 <li>
                     Implemented revorb.exe for WWEM/WWES and WWEV audio file
-                    extraction when extracting to ogg
+                    extraction when extracting to OGG.
                 </li>
                 <li>
                     Implemented a master hash list that contains known hashes
-                    for all 3 of the HITMAN trilogy games
+                    for all 3 of the HITMAN trilogy games.
                     <ul>
                         <li>
                             You can also search for known hashes using this
@@ -864,7 +881,7 @@ export const VERSION_1_3_0: RpkgVersion = {
                 </li>
                 <li>
                     Added extra meta file outputs when using WWES extraction
-                    mode
+                    mode.
                 </li>
             </ul>
         </React.Fragment>
@@ -877,9 +894,10 @@ export const VERSION_1_2_1: RpkgVersion = {
     changelog: (
         <React.Fragment>
             <ul>
-                <li>Added rpkg.exe command JSON examples</li>
+                <li>Added rpkg.exe command JSON examples.</li>
                 <li>
-                    Fixed ORES extraction issue when no input filter was present
+                    Fixed ORES extraction issue when no input filter was
+                    present.
                 </li>
             </ul>
         </React.Fragment>
@@ -893,16 +911,16 @@ export const VERSION_1_2_0: RpkgVersion = {
         <React.Fragment>
             <ul>
                 <li>
-                    Added filtering to the ORES WWEV and WWES extraction modes
+                    Added filtering to the ORES WWEV and WWES extraction modes.
                 </li>
                 <li>
                     Implemented a new scripted command interface through the use
-                    of JSON files
+                    of JSON files.
                 </li>
                 <li>
                     Enable the use of drag and drag for both RPKG and JSON files
                     directly upon the exe, thereby allowing full control of
-                    rpkg.exe without command line interface use
+                    rpkg.exe without command line interface use.
                 </li>
             </ul>
         </React.Fragment>
@@ -937,7 +955,7 @@ export const VERSION_1_1_0: RpkgVersion = {
             <ul>
                 <li>
                     Added the ability to compute an IOI hash from an assembly
-                    string
+                    string.
                 </li>
                 <li>
                     Added extraction and rebuilding functionality for a variety
@@ -952,7 +970,7 @@ export const VERSION_1_1_0: RpkgVersion = {
                 </li>
                 <li>
                     WWES (Dialog) extraction with full IOI internal Wwise file
-                    paths / names
+                    paths / names.
                 </li>
                 <li>
                     XTEA encryption/decryption for packagedefintion.txt /
@@ -971,7 +989,7 @@ export const VERSION_1_0_3: RpkgVersion = {
             <ul>
                 <li>
                     Fixed issue preventing perfect 1:1 repacking of previously
-                    unpacked RPKG files
+                    unpacked RPKG files.
                 </li>
             </ul>
         </React.Fragment>
@@ -986,13 +1004,13 @@ export const VERSION_1_0_2: RpkgVersion = {
             <ul>
                 <li>
                     Added the ability to specify a desired output folder using{" "}
-                    <code>-output_path</code>
+                    <code>-output_path</code>.
                 </li>
                 <li>
                     Fixed an issue limiting importing RPKGs with under 100 hash
-                    files/resources
+                    files/resources.
                 </li>
-                <li>Fixed ORES extraction issue</li>
+                <li>Fixed ORES extraction issue.</li>
             </ul>
         </React.Fragment>
     ),
@@ -1005,9 +1023,10 @@ export const VERSION_1_0_1: RpkgVersion = {
         <React.Fragment>
             <ul>
                 <li>
-                    Decreased the RPKG file import time by an order of magnitude
+                    Decreased the RPKG file import time by an order of
+                    magnitude.
                 </li>
-                <li>Fixed issue related to handling multiple input filters</li>
+                <li>Fixed issue related to handling multiple input filters.</li>
             </ul>
         </React.Fragment>
     ),
@@ -1019,7 +1038,7 @@ export const VERSION_1_0_0: RpkgVersion = {
     changelog: (
         <React.Fragment>
             <ul>
-                <li>Initial release</li>
+                <li>Initial release.</li>
             </ul>
         </React.Fragment>
     ),
