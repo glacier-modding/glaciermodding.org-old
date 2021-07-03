@@ -179,7 +179,7 @@ export default function Rpkg({ allVersions }) {
                             </Button>
                         </Link>
 
-                        {/* <Link href={`https://wiki.notex.app`}>
+                        <Link href={`https://wiki.notex.app`}>
                         <Button
                             variant={"outlined"}
                             color={"secondary"}
@@ -187,7 +187,7 @@ export default function Rpkg({ allVersions }) {
                         >
                             Wiki
                         </Button>
-                    </Link> */}
+                    </Link>
                     </AccordionActions>
 
                     <img
