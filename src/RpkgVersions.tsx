@@ -8,6 +8,39 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.16.1",
+    date: "3 July 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>Refactored source code (thanks NoFaTe!)</li>
+                <ul>
+                    <li>Updated ResourceLib.</li>
+                    <li>Changelog:</li>
+                    <ul>
+                        <li>
+                            Update ResourceLib for HITMAN 3{" "}
+                            <code>3.40.0.0</code>
+                        </li>
+                        <li>
+                            Added a bunch of missing property names to
+                            ResourceLib (thanks Anthony Fuller).
+                        </li>
+                    </ul>
+                    <li>
+                        From now on ResourceLib will not be bundled inside
+                        rpkg.exe to comply with the GPLv3 license. Instead, the
+                        latest release as of compilation is provided in the
+                        download, these DLLs need to be in the same directory as
+                        rpkg.exe
+                    </li>
+                </ul>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_16_0: RpkgVersion = {
     id: "2.16.0",
     date: "29 May 2021",
     changelog: (
@@ -1046,6 +1079,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_16_0,
     VERSION_2_15_1,
     VERSION_2_15_0,
     VERSION_2_14_0,
