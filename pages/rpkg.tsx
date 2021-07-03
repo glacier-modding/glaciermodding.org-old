@@ -16,7 +16,13 @@ import Header from "../src/Header"
 import { latest, RpkgVersion, versions } from "../src/RpkgVersions"
 import { renderToString } from "react-dom/server"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import { ChevronLeft, ChevronRight, GetApp } from "@material-ui/icons"
+import {
+    ChevronLeft,
+    ChevronRight,
+    GetApp,
+    GitHub,
+    MenuBook,
+} from "@material-ui/icons"
 
 interface DownloadButtonProps {
     versionId: string
@@ -158,13 +164,31 @@ export default function Rpkg({ allVersions }) {
 
             <ThemeProvider theme={darkTheme}>
                 <main className="main">
-                    <h1 className="title">RPKG</h1>
+                    <h1 className="title">RPKG Tool</h1>
 
-                    <h2 className="is-gray">
-                        Developed by{" "}
-                        <span className="is-not-gray">[REDACTED]</span> and
-                        hosted by Notex.
-                    </h2>
+                    <AccordionActions>
+                        <Link
+                            href={`https://github.com/glacier-modding/RPKG-Tool`}
+                        >
+                            <Button
+                                variant={"outlined"}
+                                color={"secondary"}
+                                startIcon={<GitHub />}
+                            >
+                                Github Repo
+                            </Button>
+                        </Link>
+
+                        {/* <Link href={`https://wiki.notex.app`}>
+                        <Button
+                            variant={"outlined"}
+                            color={"secondary"}
+                            startIcon={<MenuBook />}
+                        >
+                            Wiki
+                        </Button>
+                    </Link> */}
+                    </AccordionActions>
 
                     <img
                         width={1280}
