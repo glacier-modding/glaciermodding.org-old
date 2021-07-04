@@ -180,32 +180,30 @@ export default function Rpkg({ allVersions }) {
                         </Link>
 
                         <Link href={`https://wiki.notex.app`}>
-                        <Button
-                            variant={"outlined"}
-                            color={"primary"}
-                            startIcon={<MenuBook />}
-                        >
-                            Wiki
-                        </Button>
-                    </Link>
+                            <Button
+                                variant={"outlined"}
+                                color={"primary"}
+                                startIcon={<MenuBook />}
+                            >
+                                Wiki
+                            </Button>
+                        </Link>
                     </AccordionActions>
 
                     <AccordionActions>
-                        {/* <DownloadButton versionId={latest.id} />
-                        <DownloadSrcButton versionId={latest.id} /> */}
                         <Link
                             href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${latest.id}/rpkg_v${latest.id}.zip`}
                         >
-                        <Button
-                            variant={"outlined"}
-                            color={"secondary"}
-                            startIcon={<GetApp />}
+                            <Button
+                                variant={"outlined"}
+                                color={"secondary"}
+                                startIcon={<GetApp />}
                             >
                                 Download Latest Build v{latest.id}
                             </Button>
-                            </Link>
+                        </Link>
                     </AccordionActions>
-                    
+
                     <i className="subnote">
                         See below for past versions and changelogs
                     </i>
