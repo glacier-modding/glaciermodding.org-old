@@ -206,7 +206,9 @@ export default function Rpkg({ allVersions }) {
                             </Link>
                     </AccordionActions>
                     
-                    <i className="subnote">See below for past versions and changelogs</i>
+                    <i className="subnote">
+                        See below for past versions and changelogs
+                    </i>
 
                     <img
                         className="rpkg-image"
