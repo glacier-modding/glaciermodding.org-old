@@ -8,6 +8,20 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.16.2",
+    date: "7 July 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>Updated enums to match ResourceLib (for brick editor)</li>
+                <li>Added Hitman 2016 LOCR extraction and rebuilding</li>
+                <li>RPKG CLI now loads the hash list from the folder the executable is in like RPKG GUI</li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_16_1: RpkgVersion = {
     id: "2.16.1",
     date: "3 July 2021",
     changelog: (
@@ -1079,6 +1093,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_16_1,
     VERSION_2_16_0,
     VERSION_2_15_1,
     VERSION_2_15_0,
