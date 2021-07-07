@@ -13,9 +13,26 @@ export const latest: RpkgVersion = {
     changelog: (
         <React.Fragment>
             <ul>
-                <li>Updated enums to match ResourceLib (for brick editor)</li>
+                <li>Updated ResourceLib</li>
+                <ul>
+                    <li>Changelog:</li>
+                    <ul>
+                        <li>
+                            Added a shitload of new properties to ResourceLib
+                            (thanks Anthony Fuller)
+                        </li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li>
+                        Updated enums to match ResourceLib (for brick editor)
+                    </li>
+                </ul>
                 <li>Added Hitman 2016 LOCR extraction and rebuilding</li>
-                <li>RPKG CLI now loads the hash list from the folder the executable is in like RPKG GUI</li>
+                <li>
+                    RPKG CLI now loads the hash list from the folder the
+                    executable is in like RPKG GUI
+                </li>
             </ul>
         </React.Fragment>
     ),
