@@ -37,3 +37,7 @@ public/assets
 .yarn/install-state.gz
 .yarn/cache
 .yarn/unplugged
+.yarn/sdks
+
+# IDE related files
+.vscode
