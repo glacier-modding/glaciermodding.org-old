@@ -8,30 +8,86 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.16.3",
+    date: "1 August 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>Updated ResourceLib:</li>
+                <ul>
+                    <li>Changelog:</li>
+                    <ul>
+                        <li>
+                            Update ResourceLib for HITMAN 3{" "}
+                            <code>3.50.0.0.</code>
+                        </li>
+                        <li>
+                            Add Hitman 2016 support to CodeGenLib and the
+                            CodeGen tool.
+                        </li>
+                        <li>
+                            Add a new ResourceLib variant that supports Hitman
+                            2016 (<code>ResourceLib_HM2016</code>).
+                        </li>
+                        <li>Add Hitman 2016 support to ResourceTool.</li>
+                        <li>
+                            Improve error output of ResourceLib / ResourceTool
+                            when resource generation fails.
+                        </li>
+                    </ul>
+                </ul>
+                <li>
+                    Note: H2016 brick editing is not currently supported but the
+                    ResourceLib DLL is included in the download. This DLL can be
+                    safely deleted.
+                </li>
+                <li>Updated enums to match ResourceLib (for brick editor).</li>
+                <li>LOCR/RTLV support for the latest H3 update.</li>
+                <ul>
+                    <li>
+                        Note: DLGE will currently show the incorrect language
+                        identifiers but this doesn't affect functionality.
+                    </li>
+                </ul>
+                <li>Made details, hex viewer & JSON viewer read only.</li>
+                <li>Fixed a bug where the image viewer can crash the GUI.</li>
+                <li>
+                    Fixed a bug where certain LOCR would crash the program
+                    (Inconsistent IOI).
+                </li>
+                <li>
+                    Added a <code>-licenses</code> command to RPKG CLI.
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_16_2: RpkgVersion = {
     id: "2.16.2",
     date: "7 July 2021",
     changelog: (
         <React.Fragment>
             <ul>
-                <li>Updated ResourceLib</li>
+                <li>Updated ResourceLib:</li>
                 <ul>
                     <li>Changelog:</li>
                     <ul>
                         <li>
                             Added a shitload of new properties to ResourceLib
-                            (thanks Anthony Fuller)
+                            (thanks Anthony Fuller).
                         </li>
                     </ul>
                 </ul>
                 <ul>
                     <li>
-                        Updated enums to match ResourceLib (for brick editor)
+                        Updated enums to match ResourceLib (for brick editor).
                     </li>
                 </ul>
-                <li>Added Hitman 2016 LOCR extraction and rebuilding</li>
+                <li>Added Hitman 2016 LOCR extraction and rebuilding.</li>
                 <li>
                     RPKG CLI now loads the hash list from the folder the
-                    executable is in like RPKG GUI
+                    executable is in like RPKG GUI.
                 </li>
             </ul>
         </React.Fragment>
@@ -47,23 +103,27 @@ export const VERSION_2_16_1: RpkgVersion = {
                 <li>Refactored source code (thanks NoFaTe!)</li>
                 <ul>
                     <li>Updated ResourceLib.</li>
-                    <li>Changelog:</li>
                     <ul>
-                        <li>
-                            Update ResourceLib for HITMAN 3{" "}
-                            <code>3.40.0.0</code>
-                        </li>
-                        <li>
-                            Added a bunch of missing property names to
-                            ResourceLib (thanks Anthony Fuller).
-                        </li>
+                        <li>Changelog:</li>
+                    </ul>
+                    <ul>
+                        <ul>
+                            <li>
+                                Update ResourceLib for HITMAN 3{" "}
+                                <code>3.40.0.0</code>
+                            </li>
+                            <li>
+                                Added a bunch of missing property names to
+                                ResourceLib (thanks Anthony Fuller).
+                            </li>
+                        </ul>
                     </ul>
                     <li>
                         From now on ResourceLib will not be bundled inside
                         rpkg.exe to comply with the GPLv3 license. Instead, the
                         latest release as of compilation is provided in the
                         download, these DLLs need to be in the same directory as
-                        rpkg.exe
+                        rpkg.exe.
                     </li>
                 </ul>
             </ul>
@@ -197,15 +257,15 @@ export const VERSION_2_13_0: RpkgVersion = {
                         <li>
                             Added Hitman 2 functionality to the Entity/Brick
                             (TEMP/TBLU) Editor (by adding such functionality to
-                            ResourceTool)
+                            ResourceTool).
                         </li>
                         <li>
                             Added the option to load the Entity/Brick
-                            (TEMP/TBLU) Editor in non-recursive mode
+                            (TEMP/TBLU) Editor in non-recursive mode.
                         </li>
                         <li>
                             Restored and moved the expand and collapse all nodes
-                            buttons in the Entity/Brick (TEMP/TBLU) Editor
+                            buttons in the Entity/Brick (TEMP/TBLU) Editor.
                         </li>
                         <li>
                             The Entity/Brick (TEMP/TBLU) Editor now allows
@@ -1110,6 +1170,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_16_2,
     VERSION_2_16_1,
     VERSION_2_16_0,
     VERSION_2_15_1,
