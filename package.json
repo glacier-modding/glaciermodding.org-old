@@ -6,24 +6,21 @@
         "dev": "next dev",
         "build": "next build && yarn node postbuild",
         "start": "next start",
-        "prettier": "prettier --write **/*.{ts,js,tsx,json,md,css,html}",
-        "export": "next export",
-        "deploy": "gh-pages -d out"
+        "prettier": "prettier --write **/*.{ts,js,tsx,json,md,css,html}"
     },
     "dependencies": {
-        "@material-ui/core": "^4.11.4",
+        "@material-ui/core": "^4.12.3",
         "@material-ui/icons": "^4.11.2",
-        "next": "^10.2.3",
+        "next": "^11.0.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "@types/node": "^15.12.1",
-        "@types/react": "^17.0.9",
-        "@types/react-dom": "^17.0.6",
-        "gh-pages": "^3.2.0",
-        "prettier": "^2.3.1",
-        "typescript": "^4.3.2"
+        "@types/node": "^16.4.3",
+        "@types/react": "^17.0.16",
+        "@types/react-dom": "^17.0.9",
+        "prettier": "^2.3.2",
+        "typescript": "^4.3.5"
     },
     "prettier": {
         "semi": false,
