@@ -799,6 +799,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clean-css@npm:^5.1.5":
+  version: 5.1.5
+  resolution: "clean-css@npm:5.1.5"
+  dependencies:
+    source-map: ~0.6.0
+  checksum: 67ca53cabe22dabafd338bde5ebb5c416e151f9b6cb73b774db888ddf6c39272e373c0e81bea98a75e67182d1b6a915c7ade88434242b35f79217d1a13f29075
+  languageName: node
+  linkType: hard
+
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -2428,6 +2437,7 @@ fsevents@~2.3.1:
     "@types/node": ^16.4.3
     "@types/react": ^17.0.16
     "@types/react-dom": ^17.0.9
+    clean-css: ^5.1.5
     next: ^11.0.1
     prettier: ^2.3.2
     react: ^17.0.2
@@ -3097,7 +3107,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"source-map@npm:^0.6.1":
+"source-map@npm:^0.6.1, source-map@npm:~0.6.0":
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 59ce8640cf3f3124f64ac289012c2b8bd377c238e316fb323ea22fbfe83da07d81e000071d7242cad7a23cd91c7de98e4df8830ec3f133cb6133a5f6e9f67bc2
