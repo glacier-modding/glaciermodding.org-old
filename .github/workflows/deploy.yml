@@ -23,22 +23,22 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           
-      - name: Use NPM 7
-        run: npm i -g npm@latest
+      - name: Use Yarn
+        run: npm install --global yarn
 
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ~/.npm
+          path: ~/.cache
           key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.OS }}-node-
             ${{ runner.OS }}-
       - name: Build
         run: |
-          npm ci --legacy-peer-deps
-          npm run build
-          npm run export
+          yarn install
+          yarn run build
+          yarn run export
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
