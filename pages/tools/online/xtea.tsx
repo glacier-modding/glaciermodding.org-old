@@ -1,22 +1,22 @@
-// @ts-nocheck
+// @ts-nocheck This page gets modified at build time to make it work.
 
 import React from "react"
 import Header from "../../../src/Header"
 import dynamic from "next/dynamic"
-import Head from "next/head"
+import PageSeo from "../../../src/PageSeo"
 
 const XteaImage = dynamic(() => import("../../../src/XteaImage"))
 
 export default function Xtea() {
     return (
         <div>
-            <Head>
-                <title>XTEA Online Tool - Notex.app</title>
-                <meta
-                    name="keywords"
-                    content="glacier engine, hitman, tools, resources, modding, mod, rpkg, locr, rtlv, dlge, gfxf, unpack, pack, xtea"
-                />
-            </Head>
+            <PageSeo
+                title={"XTEA Online Tool"}
+                description={
+                    "An online tool built to encode and decode files that use IOI's modified XTEA algorithm."
+                }
+                pageUrl={"/tools/online/xtea"}
+            />
 
             <div className="container">
                 <Header logo={<XteaImage />} />

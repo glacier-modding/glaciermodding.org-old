@@ -10,7 +10,6 @@ import {
     IconButton,
     ThemeProvider,
 } from "@material-ui/core"
-import Head from "next/head"
 import Link from "next/link"
 import Header from "../src/Header"
 import { latest, RpkgVersion, versions } from "../src/RpkgVersions"
@@ -23,6 +22,7 @@ import {
     GitHub,
     MenuBook,
 } from "@material-ui/icons"
+import PageSeo from "../src/PageSeo"
 
 interface DownloadButtonProps {
     versionId: string
@@ -148,17 +148,11 @@ export default function Rpkg({ allVersions }) {
 
     return (
         <div className="container">
-            <Head>
-                <title>Notex.app - RPKG Tool</title>
-                <meta
-                    name="description"
-                    content="The RPKG tool allows for easy (un)packing of files from the Glacier Engine RPKG file format!"
-                />
-                <meta
-                    name="keywords"
-                    content="glacier engine, hitman, tools, resources, modding, mod, rpkg, locr, rtlv, dlge, gfxf, unpack, pack"
-                />
-            </Head>
+            <PageSeo
+                title="RPKG Tool"
+                description="The RPKG tool allows for easy (un)packing of files from the Glacier 2 Engine RPKG file format!"
+                pageUrl="/rpkg"
+            />
 
             <Header />
 

@@ -1,23 +1,15 @@
-import Head from "next/head"
 import Header from "../../src/Header"
 import { Button, Grid } from "@material-ui/core"
+import PageSeo from "../../src/PageSeo"
 
 export default function Prepatched() {
     return (
         <div className="container">
-            <Head>
-                <title>
-                    Notex.app - Pre-patched packagedefinition.txt files
-                </title>
-                <meta
-                    name="description"
-                    content="Glacier Engine 2 - Pre-patched packagedefinition.txt files for the HITMAN(TM) series."
-                />
-                <meta
-                    name="keywords"
-                    content="glacier engine, hitman, tools, resources, modding, mod, rpkg, locr, rtlv, dlge, gfxf, unpack, pack"
-                />
-            </Head>
+            <PageSeo
+                title="Pre-patched Package Definitions"
+                description="Pre-patched package definition files, to make installing mods faster."
+                pageUrl="/xtea/prepatched"
+            />
 
             <Header />
 

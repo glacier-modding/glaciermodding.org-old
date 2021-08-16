@@ -21,7 +21,9 @@ export default function Header({ logo }: HeaderProps) {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://hitmandb.notex.app">HitmanDB</a>
+                                <a href="https://hitmandb.notex.app">
+                                    HitmanDB
+                                </a>
                             </li>
                         </ul>
                     </nav>

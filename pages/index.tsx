@@ -1,22 +1,14 @@
-import Head from "next/head"
 import Header from "../src/Header"
+import PageSeo from "../src/PageSeo"
 
 export default function Home() {
     return (
         <div className="container">
-            <Head>
-                <title>
-                    Notex.app - Glacier Engine 2 - Tools and Resources
-                </title>
-                <meta
-                    name="description"
-                    content="Glacier Engine 2 - Tools and Resources"
-                />
-                <meta
-                    name="keywords"
-                    content="glacier engine, hitman, tools, resources, modding, mod, rpkg, locr, rtlv, dlge, gfxf, unpack, pack"
-                />
-            </Head>
+            <PageSeo
+                title="Glacier 2 Engine - Tools and Resources"
+                description="Home page of Notex.app, a website dedicated to IO Interactive's Glacier 2 Engine. Home of some Tools and Resources. Join the modding community Discord."
+                pageUrl=""
+            />
 
             <Header />
 
