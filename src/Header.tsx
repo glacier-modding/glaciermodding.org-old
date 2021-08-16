@@ -13,15 +13,15 @@ export default function Header({ logo }: HeaderProps) {
                     <nav className="menu">
                         <ul className="menu-inner">
                             <li>
-                                <a href="https://hitmandb.notex.app">Hash DB</a>
-                            </li>
-                            <li>
                                 <Link href="/rpkg">RPKG Tool</Link>
                             </li>
                             <li>
                                 <a href="/tools/online/xtea/">
                                     XTEA Online Tool
                                 </a>
+                            </li>
+                            <li>
+                                <a href="https://hitmandb.notex.app">HitmanDB</a>
                             </li>
                         </ul>
                     </nav>
