@@ -10,5 +10,4 @@ module.exports = {
             },
         ]
     },
-    assetPrefix: isProd ? '/notex.app/' : ''
 }
