@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
     async redirects() {
         return [
@@ -8,4 +10,5 @@ module.exports = {
             },
         ]
     },
+    assetPrefix: isProd ? '/notex.app/' : ''
 }
