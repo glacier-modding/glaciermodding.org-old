@@ -12,6 +12,11 @@ a {
     text-decoration: none;
 }
 
+.xtealogo {
+    max-width:200px;
+    max-height: 50px;
+}
+
 .header {
     background: #1b1c1d;
     display: flex;
