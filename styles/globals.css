@@ -24,7 +24,7 @@ a {
     justify-content: center;
     position: relative;
     height: 30px;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .header-inner {

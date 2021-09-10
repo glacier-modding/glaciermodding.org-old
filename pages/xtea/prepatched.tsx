@@ -1,5 +1,5 @@
 import Header from "../../src/Header"
-import { Button, Grid } from "@material-ui/core"
+import { Button, Grid } from "@mui/material"
 import PageSeo from "../../src/PageSeo"
 
 export default function Prepatched() {
@@ -21,7 +21,7 @@ export default function Prepatched() {
                     some already patched for you to download.
                 </h2>
 
-                <Grid container justify={"center"}>
+                <Grid container justifyContent={"center"}>
                     <Grid item xs={3}>
                         <h3>HITMAN&trade; 3</h3>
                         <a

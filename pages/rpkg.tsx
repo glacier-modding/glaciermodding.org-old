@@ -5,66 +5,18 @@ import {
     AccordionDetails,
     AccordionSummary,
     Button,
-    createMuiTheme,
-    Grid,
-    IconButton,
-    ThemeProvider,
-} from "@material-ui/core"
+} from "@mui/material"
 import Link from "next/link"
 import Header from "../src/Header"
 import { latest, RpkgVersion, versions } from "../src/RpkgVersions"
 import { renderToString } from "react-dom/server"
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import {
-    ChevronLeft,
-    ChevronRight,
-    GetApp,
-    GitHub,
-    MenuBook,
-} from "@material-ui/icons"
+import { GetApp, GitHub, MenuBook, ExpandMore } from "@mui/icons-material"
 import PageSeo from "../src/PageSeo"
+import Carousel from "../src/Carousel"
 
 interface DownloadButtonProps {
     versionId: string
 }
-
-const darkTheme = createMuiTheme({
-    palette: {
-        type: "dark",
-        primary: {
-            main: "#a6d4fa",
-        },
-        secondary: {
-            main: "#81c784",
-        },
-    },
-    typography: {
-        fontFamily:
-            "Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
-    },
-    overrides: {
-        // fix inconsistent widths
-        MuiAccordion: {
-            root: {
-                width: "90%",
-                "&$expanded": {
-                    margin: "auto",
-                },
-            },
-        },
-        MuiAccordionSummary: {
-            root: {
-                marginBottom: -1,
-            },
-            content: {
-                "&$expanded": {
-                    margin: "12px 0",
-                },
-            },
-            expanded: {},
-        },
-    },
-})
 
 function DownloadButton({ versionId }: DownloadButtonProps) {
     return (
@@ -137,14 +89,24 @@ export default function Rpkg({ allVersions }) {
     // of it's open/closed state.
     const [firstAccordionOpen, setFirstAccordionOpen] =
         React.useState<boolean>(true)
-    const [image, setImage] = React.useState<number>(0)
-    const images = [
-        "/rpkg-1.png",
-        "/rpkg-2.png",
-        "/rpkg-3.png",
-        "/rpkg-4.png",
-        "/rpkg-5.png",
-    ]
+
+    const images = React.useMemo(
+        () =>
+            [
+                "/rpkg-1.png",
+                "/rpkg-2.png",
+                "/rpkg-3.png",
+                "/rpkg-4.png",
+                "/rpkg-5.png",
+            ].map((obj) => (
+                <img
+                    className="rpkg-image"
+                    src={obj}
+                    alt="The RPKG tool in action."
+                />
+            )),
+        []
+    )
 
     return (
         <div className="container">
@@ -156,127 +118,100 @@ export default function Rpkg({ allVersions }) {
 
             <Header />
 
-            <ThemeProvider theme={darkTheme}>
-                <main className="main">
-                    <h1 className="title">RPKG Tool</h1>
+            <main className="main">
+                <h1 className="title">RPKG Tool</h1>
 
-                    <AccordionActions>
-                        <Link
-                            href={`https://github.com/glacier-modding/RPKG-Tool`}
+                <AccordionActions>
+                    <Link href={`https://github.com/glacier-modding/RPKG-Tool`}>
+                        <Button
+                            variant={"outlined"}
+                            color={"primary"}
+                            startIcon={<GitHub />}
                         >
-                            <Button
-                                variant={"outlined"}
-                                color={"primary"}
-                                startIcon={<GitHub />}
-                            >
-                                Github
-                            </Button>
-                        </Link>
+                            GitHub
+                        </Button>
+                    </Link>
 
-                        <Link href={`https://wiki.notex.app`}>
-                            <Button
-                                variant={"outlined"}
-                                color={"primary"}
-                                startIcon={<MenuBook />}
-                            >
-                                Wiki
-                            </Button>
-                        </Link>
-                    </AccordionActions>
-
-                    <AccordionActions>
-                        <Link
-                            href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${latest.id}/rpkg_v${latest.id}.zip`}
+                    <Link href={`https://wiki.notex.app`}>
+                        <Button
+                            variant={"outlined"}
+                            color={"primary"}
+                            startIcon={<MenuBook />}
                         >
-                            <Button
-                                variant={"outlined"}
-                                color={"secondary"}
-                                startIcon={<GetApp />}
-                            >
-                                Download Latest Build v{latest.id}
-                            </Button>
-                        </Link>
-                    </AccordionActions>
+                            Wiki
+                        </Button>
+                    </Link>
+                </AccordionActions>
 
-                    <i className="subnote">
-                        See below for past versions and changelogs
-                    </i>
-
-                    <img
-                        className="rpkg-image"
-                        src={images[image]}
-                        alt="The RPKG tool in action."
-                    />
-
-                    <Grid
-                        container
-                        justify="center"
-                        style={{ margin: "19.92px" }}
+                <AccordionActions>
+                    <Link
+                        href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${latest.id}/rpkg_v${latest.id}.zip`}
                     >
-                        <IconButton
-                            disabled={image === 0}
-                            onClick={() => {
-                                image !== 0 && setImage(image - 1)
-                            }}
+                        <Button
+                            variant={"outlined"}
+                            color={"secondary"}
+                            startIcon={<GetApp />}
                         >
-                            <ChevronLeft />
-                        </IconButton>
+                            Download Latest Build v{latest.id}
+                        </Button>
+                    </Link>
+                </AccordionActions>
 
-                        <IconButton
-                            onClick={() => {
-                                image + 1 < images.length
-                                    ? setImage(image + 1)
+                <i className="subnote">
+                    See below for past versions and changelogs
+                </i>
+
+                <Carousel items={images} />
+
+                {allVersions.map((v) => (
+                    <Accordion
+                        key={v.id}
+                        expanded={
+                            v.id === latest.id ? firstAccordionOpen : void 0
+                        }
+                        style={{
+                            width: "90%",
+                            // @ts-expect-error
+                            "&$expanded": {
+                                margin: "auto",
+                            },
+                        }}
+                    >
+                        <AccordionSummary
+                            expandIcon={<ExpandMore />}
+                            aria-controls={`changelog-${v.id}-content`}
+                            id={`changelog-${v.id}-header`}
+                            onClick={
+                                v.id === latest.id
+                                    ? () =>
+                                          setFirstAccordionOpen(
+                                              !firstAccordionOpen
+                                          )
                                     : void 0
-                            }}
-                            disabled={images.length === image + 1}
-                        >
-                            <ChevronRight />
-                        </IconButton>
-                    </Grid>
-
-                    {allVersions.map((v) => (
-                        <Accordion
-                            key={v.id}
-                            expanded={
-                                v.id === latest.id ? firstAccordionOpen : void 0
                             }
                         >
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls={`changelog-${v.id}-content`}
-                                id={`changelog-${v.id}-header`}
-                                onClick={
-                                    v.id === latest.id
-                                        ? () =>
-                                              setFirstAccordionOpen(
-                                                  !firstAccordionOpen
-                                              )
-                                        : void 0
-                                }
-                            >
-                                <p>New in v{v.id}</p>
-                            </AccordionSummary>
-                            <AccordionDetails className="changelog">
-                                <div>
-                                    <p>Released {v.date}</p>
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: v.changelog,
-                                        }}
-                                    />
-                                </div>
-                            </AccordionDetails>
-                            <AccordionActions>
-                                <DownloadButton versionId={v.id} />
-                                <DownloadSrcButton versionId={v.id} />
-                                {v.zhmtools && (
-                                    <DownloadZHMToolsButton versionId={v.id} />
-                                )}
-                            </AccordionActions>
-                        </Accordion>
-                    ))}
-                </main>
-            </ThemeProvider>
+                            <p>New in v{v.id}</p>
+                        </AccordionSummary>
+                        <AccordionDetails className="changelog">
+                            <div>
+                                <p>Released {v.date}</p>
+                                <div
+                                    dangerouslySetInnerHTML={{
+                                        __html: v.changelog,
+                                    }}
+                                />
+                            </div>
+                        </AccordionDetails>
+                        <AccordionActions>
+                            <DownloadButton versionId={v.id} />
+                            <DownloadSrcButton versionId={v.id} />
+                            {v.zhmtools && (
+                                <DownloadZHMToolsButton versionId={v.id} />
+                            )}
+                        </AccordionActions>
+                    </Accordion>
+                ))}
+            </main>
         </div>
     )
 }
