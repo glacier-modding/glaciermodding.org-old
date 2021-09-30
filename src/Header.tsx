@@ -27,7 +27,7 @@ export default function Header({ logo }: HeaderProps) {
                             </li>
                         </ul>
                     </nav>
-                    <a href="https://discord.com/invite/hxPT9rf">
+                    <a href="https://discord.gg/6UDtuYhZP6">
                         <span className="discord-icon">
                             <svg
                                 className="discord-icon"
