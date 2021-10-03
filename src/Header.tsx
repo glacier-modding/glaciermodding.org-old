@@ -21,6 +21,11 @@ export default function Header({ logo }: HeaderProps) {
                                 </a>
                             </li>
                             <li>
+                                <a href="/tools/offline/h6xtea.7z">
+                                    XTEA Offline Tool
+                                </a>
+                            </li>
+                            <li>
                                 <a href="https://hitmandb.notex.app">
                                     HitmanDB
                                 </a>
