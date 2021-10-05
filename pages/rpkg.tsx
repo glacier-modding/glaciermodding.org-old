@@ -152,9 +152,20 @@ export default function Rpkg({ allVersions }) {
                             color={"secondary"}
                             startIcon={<GetApp />}
                         >
-                            Download Latest Build v{latest.id}
+                            Latest Release Build v{latest.id}
                         </Button>
                     </Link>
+
+                    <Link href={`https://nightly.link/glacier-modding/RPKG-Tool/workflows/build/main/rpkg.zip`}>
+                        <Button
+                            variant={"outlined"}
+                            color={"warning"}
+                            startIcon={<GetApp />}
+                        >
+                            Nightly Build
+                        </Button>
+                    </Link>
+
                 </AccordionActions>
 
                 <i className="subnote">
