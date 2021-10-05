@@ -1,10 +1,23 @@
 import Link from "next/link"
+import * as React from "react"
+import Button from "@mui/material/Button"
+import Menu from "@mui/material/Menu"
+import MenuItem from "@mui/material/MenuItem"
 
 interface HeaderProps {
     logo?: JSX.Element
 }
 
 export default function Header({ logo }: HeaderProps) {
+    const [anchorEl, setAnchorEl] = React.useState(null)
+    const open = Boolean(anchorEl)
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget)
+    }
+    const handleClose = () => {
+        setAnchorEl(null)
+    }
+
     return (
         <header className="header">
             <span className="header-inner">
@@ -12,24 +25,61 @@ export default function Header({ logo }: HeaderProps) {
                 <span className="header-right">
                     <nav className="menu">
                         <ul className="menu-inner">
-                            <li>
+                            <Button
+                                style={{
+                                    fontSize: "1rem",
+                                    textTransform: "none",
+                                }}
+                                variant={"text"}
+                                color={"inherit"}
+                            >
                                 <Link href="/rpkg">RPKG Tool</Link>
-                            </li>
-                            <li>
-                                <a href="/tools/online/xtea">
-                                    XTEA Online Tool
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/tools/offline/h6xtea.7z">
-                                    XTEA Offline Tool
-                                </a>
-                            </li>
-                            <li>
+                            </Button>
+                            <Button
+                                style={{
+                                    fontSize: "1rem",
+                                    textTransform: "none",
+                                }}
+                                variant={"text"}
+                                color={"inherit"}
+                                id="basic-button"
+                                aria-controls="basic-menu"
+                                aria-haspopup="true"
+                                aria-expanded={open ? "true" : undefined}
+                                onClick={handleClick}
+                            >
+                                XTEA Tool
+                            </Button>
+                            <Menu
+                                id="basic-menu"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                MenuListProps={{
+                                    "aria-labelledby": "basic-button",
+                                }}
+                            >
+                                <MenuItem onClick={handleClose}>
+                                    <a href="/tools/online/xtea">Online Tool</a>
+                                </MenuItem>
+                                <MenuItem onClick={handleClose}>
+                                    <a href="/tools/offline/h6xtea.7z">
+                                        Offline Tool
+                                    </a>
+                                </MenuItem>
+                            </Menu>
+                            <Button
+                                style={{
+                                    fontSize: "1rem",
+                                    textTransform: "none",
+                                }}
+                                variant={"text"}
+                                color={"inherit"}
+                            >
                                 <a href="https://hitmandb.notex.app">
                                     HitmanDB
                                 </a>
-                            </li>
+                            </Button>
                         </ul>
                     </nav>
                     <a href="https://discord.gg/6UDtuYhZP6">
