@@ -8,6 +8,28 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.17.1",
+    date: "7 October 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>Hotfix for v2.17.0</strong>:
+                </li>
+                <ul>
+                    <li>
+                        <strong>GUI</strong>:
+                        <ul>
+                            <li>Fixed recursive brick editing.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_17_0: RpkgVersion = {
     id: "2.17.0",
     date: "7 October 2021",
     changelog: (
@@ -18,30 +40,30 @@ export const latest: RpkgVersion = {
                     <ul>
                         <li>
                             Fix color picker for locales with commas as decimal
-                            separator
+                            separator.
                         </li>
-                        <li>Update the hash list update message</li>
-                        <li>Remove useless warnings</li>
+                        <li>Update the hash list update message.</li>
+                        <li>Remove useless warnings.</li>
                         <li>
                             <em>Hash Calculator</em>:
                             <ul>
-                                <li>Add save to clipboard feature</li>
-                                <li>Made said feature faster</li>
+                                <li>Add save to clipboard feature.</li>
+                                <li>Made said feature faster.</li>
                                 <li>
-                                    Made said feature not return bogus results
+                                    Made said feature not return bogus results.
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <em>Brick editor</em>:
                             <ul>
-                                <li>Add icons</li>
-                                <li>Show node path below node tree</li>
-                                <li>Removed property data type labels</li>
-                                <li>Added format check to zguid</li>
+                                <li>Add icons.</li>
+                                <li>Show node path below node tree.</li>
+                                <li>Removed property data type labels.</li>
+                                <li>Added format check to zguid.</li>
                                 <li>
                                     Moved node tree operation buttons to a
-                                    dropdown menu
+                                    dropdown menu.
                                 </li>
                             </ul>
                         </li>
@@ -50,33 +72,33 @@ export const latest: RpkgVersion = {
                 <li>
                     <strong>CLI</strong>:
                     <ul>
-                        <li>Flush output stream in interactive mode</li>
+                        <li>Flush output stream in interactive mode.</li>
                         <li>
                             <strong>Potentially breaking</strong>: Remove JSON
                             scripting system.
                         </li>
                         <li>
                             Remove functionless dev_extract_all_entity_ids
-                            command
+                            command.
                         </li>
                     </ul>
                 </li>
                 <li>
                     <strong>RPKG</strong>:
                     <ul>
-                        <li>Fix RTLV language count offset</li>
+                        <li>Fix RTLV language count offset.</li>
                     </ul>
                 </li>
                 <li>
                     <strong>Build</strong>:
                     <ul>
-                        <li>Don&#39;t include removed header files</li>
+                        <li>Don&#39;t include removed header files.</li>
                     </ul>
                 </li>
-                <li>Fixed DLGE for HITMAN 2016</li>
+                <li>Fixed DLGE for HITMAN 2016.</li>
                 <li>
                     Added support for HITMAN 3&#39;s new locale (LOCR) format
-                    (includes Japanese)
+                    (includes Japanese).
                 </li>
             </ul>
         </React.Fragment>
@@ -1246,6 +1268,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_17_0,
     VERSION_2_16_3,
     VERSION_2_16_2,
     VERSION_2_16_1,
