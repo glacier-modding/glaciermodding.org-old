@@ -8,6 +8,42 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.17.2",
+    date: "8 October 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>GUI</strong>:
+                    <ul>
+                        <li>
+                            <em>Brick editor</em>:
+                            <ul>
+                                <li>
+                                    Fixed an issue with recursive brick editing
+                                    that caused all recursive TEMPs to be placed
+                                    into their own root nodes.
+                                </li>
+                                <li>
+                                    Fixed entity id parents so they now display
+                                    the correct id now.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>RPKG</strong>:
+                    <ul>
+                        <li>Add appropriate license for silk icon set.</li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_17_1: RpkgVersion = {
     id: "2.17.1",
     date: "7 October 2021",
     changelog: (
@@ -1268,6 +1304,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_17_1,
     VERSION_2_17_0,
     VERSION_2_16_3,
     VERSION_2_16_2,
