@@ -19,7 +19,7 @@ export default function Xtea() {
             />
 
             <div className="container">
-                <Header logo={<XteaImage />} />
+                <Header logo={<XteaImage />} isMessingWithNext={true} />
 
                 <p id="failed-load-notif">
                     You may need to reload the page unless you see the big box
