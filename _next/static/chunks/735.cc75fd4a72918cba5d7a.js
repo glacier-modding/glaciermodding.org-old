@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[735],{735:function(e,n,r){r.r(n),r.d(n,{default:function(){return u}});var t=r(5893);function u(){return(0,t.jsx)("div",{id:"xtealogo",children:(0,t.jsx)("a",{href:"/",children:"Notex.app"})})}}}]);

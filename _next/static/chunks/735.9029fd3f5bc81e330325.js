@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[735],{735:function(e,n,t){t.r(n),t.d(n,{default:function(){return s}});var a=t(5893);function s(){return(0,a.jsx)("div",{id:"xtealogo",children:(0,a.jsx)("img",{className:"xtealogo",src:"/xtea.png",alt:"XTEA logo."})})}}}]);
