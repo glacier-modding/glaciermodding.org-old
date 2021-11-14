@@ -8,6 +8,89 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.17.3",
+    date: "14th November 2021",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Hash Calculator
+                            <ul>
+                                <li>
+                                    Fixed previous hash calculations showing up
+                                    when copying new ones to the clipboard
+                                </li>
+                                <li>Removed unnecessary exit button</li>
+                                <li>
+                                    Moved to the <code>Utilities</code> menu
+                                </li>
+                                <li>
+                                    Improve resizing behaviour and add minimum
+                                    width
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            Package Definition/Thumbs Decryption &amp;
+                            Encryption
+                            <ul>
+                                <li>
+                                    Removed the need of meta files for
+                                    encrypting
+                                </li>
+                                <li>
+                                    Fixed encryption of files by calculating the
+                                    checksum
+                                </li>
+                                <li>
+                                    Added checksum check on decryption of files
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ResourceLib
+                            <ul>
+                                <li>
+                                    Update ResourceLib for{" "}
+                                    <code>HITMAN 3 3.70.0.0</code>
+                                </li>
+                                <li>Relicense everything under the LGPL.</li>
+                                <li>
+                                    Improve ResourceLib performance and accuracy
+                                    of JSON generation.
+                                </li>
+                                <li>
+                                    Improve ResourceLib performance and accuracy
+                                    of JSON parsing.
+                                </li>
+                                <li>
+                                    Fix an issue where generated resources could
+                                    cause the game to exhibit weird behavior.
+                                </li>
+                                <li>
+                                    Introduce support for generating
+                                    &quot;compatible&quot; resources to
+                                    ResourceLib (find more info on the ZHMTools
+                                    release page).
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_17_2: RpkgVersion = {
     id: "2.17.2",
     date: "8 October 2021",
     changelog: (
@@ -1304,6 +1387,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_17_2,
     VERSION_2_17_1,
     VERSION_2_17_0,
     VERSION_2_16_3,
