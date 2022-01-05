@@ -8,6 +8,149 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.17.4",
+    date: "5th January 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>Less redundant hash list update message.</li>
+                        <li>
+                            <em>3D Viewer</em>
+                            <ul>
+                                <li>Removed camera culling.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <em>Image Viewer</em>
+                            <ul>
+                                <li>
+                                    Image viewer now only loads when you click
+                                    it.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <em>Brick Editor</em>
+                            <ul>
+                                <li>
+                                    Fix underscores in entity and property
+                                    names.
+                                </li>
+                                <li>Improve formatting of property names.</li>
+                                <li>
+                                    Usage of TextBlocks instead of TextBoxes for
+                                    uneditable fields.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>CLI</strong>
+                    <ul>
+                        <li>
+                            <em>New commands</em>
+                            <ul>
+                                <li>
+                                    -extract_from_rpkgs (Used to mass extract
+                                    files from all RPKGs in a folder, can be
+                                    used with filters).
+                                </li>
+                                <li>
+                                    -extract_non_base_hash_depends_from
+                                    (Non-base chunk recursive extraction of hash
+                                    depends command).
+                                </li>
+                                <li>
+                                    -latest_hash (Finds what RPKG file the
+                                    latest/game used hash is in).
+                                </li>
+                                <li>
+                                    -extract_prim_textured_from (Extracts PRIM
+                                    models with diffuse and normal textures to
+                                    single GLB files).
+                                </li>
+                                <li>
+                                    -dev_hash_list_percent_found (Calculates the
+                                    number of hashes in the list that are
+                                    &#39;right&#39;).
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            Fix WWES/WWEM paths from getting cut off when
+                            extracting them if they contain parameters in their
+                            paths.
+                        </li>
+                        <li>
+                            Models now get rebuilt correctly (No more spikes!).
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Experimental</strong>
+                    <ul>
+                        <li>
+                            New map export function (experimental) -export_map
+                            that exports Hitman maps to a folder containing all
+                            that map&#39;s PRIM resources as GLB files
+                            (non-textured) and produces scene and project files
+                            to allow editing with both Godot v3 and v4.
+                        </li>
+                        <li>
+                            New map export function (experimental)
+                            -export_map_textured that exports Hitman maps to a
+                            folder containing all that map&#39;s PRIM resources
+                            as GLB files (textured) and produces scene and
+                            project files to allow editing with both Godot v3
+                            and v4. Some maps with textures fully loaded can
+                            cause Godot to crash due to insufficient memory
+                            available. This function is better used on smaller
+                            maps or custom entities/bricks.
+                        </li>
+                        <li>
+                            New map import function will be coming soon in a
+                            future reason, which will be called -import_map and
+                            it will process any changes you have made to the map
+                            in Godot and compare those changes to the
+                            &#39;vanilla&#39; map per the game&#39;s TEMP/TBLU
+                            files and produce output TEMP/TBLU/JSON/RPKG files
+                            with those changes in them.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr></hr>
+            <p>
+                <strong>
+                    Technical information regarding the model rebuilding fix:
+                </strong>
+            </p>
+            <p>
+                IOI are using single bytes for weights which only represent a
+                maximum of 256 possible float values. Weight values are now
+                shifted to their nearest 8-bit counterpart and as a whole they
+                are normalised, etc.
+            </p>
+            <p>Here is an image showcasing the fix:</p>
+            <img
+                id="comparison-image"
+                src="/prim_comparison.png"
+                alt="Comparision between models"
+            ></img>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_17_3: RpkgVersion = {
     id: "2.17.3",
     date: "14th November 2021",
     changelog: (
@@ -1387,6 +1530,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_17_3,
     VERSION_2_17_2,
     VERSION_2_17_1,
     VERSION_2_17_0,
