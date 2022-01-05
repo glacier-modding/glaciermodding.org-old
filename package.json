@@ -31,5 +31,5 @@
         "semi": false,
         "tabWidth": 4
     },
-    "packageManager": "yarn@3.1.0"
+    "packageManager": "yarn@3.1.1"
 }
