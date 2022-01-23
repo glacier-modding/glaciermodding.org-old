@@ -8,6 +8,105 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.18.0",
+    date: "23rd January 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Added QN output to right click menu for TEMP hashes.
+                        </li>
+                        <li>
+                            Added GUI implementation for the Map export and
+                            import functions/features.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>CLI</strong>
+                    <ul>
+                        <li>
+                            Added QN (QuickEntity) JSON output via new function
+                            -extract_entity_to_qn for one or more TEMP hashes
+                            specified by -filter.
+                        </li>
+                        <li>
+                            Added Map Import functionality via new function
+                            -import_map which pulls in the data from the
+                            map&#39;s Godot v4 project files and generates QN
+                            (QuickEntity) JSON files (entity or patch).
+                        </li>
+                        <li>
+                            Map Export functionality -export_map that exports
+                            Hitman maps to a folder containing all that
+                            map&#39;s PRIM resources as GLB files (non-textured)
+                            and produces scene and project files to allow
+                            editing with both Godot v4.
+                        </li>
+                        <li>
+                            General cleanup of the console output so that there
+                            is less spam.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        <strong>RPKG</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            Fixed the WWES extraction function so it works with
+                            the new WWES paths.
+                        </li>
+                        <li>
+                            Update enums for H3 v3.100.0 (Thanks{" "}
+                            <a href="https://github.com/AnthonyFuller">
+                                AnthonyFuller
+                            </a>
+                            ).
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        <strong>Map Editing caveats:</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            You must use Godot v4 (Godot v3 will not work) which
+                            you can grab from here:{" "}
+                            <a href="https://hugo.pro/projects/godot-builds/">
+                                https://hugo.pro/projects/godot-builds/
+                            </a>
+                            .
+                        </li>
+                        <li>
+                            When clicking on an entity Godot will most likely
+                            freeze for a short period of time (Depending on how
+                            many entities are in the map and also your
+                            computer&#39;s specs) and you&#39;ll have to
+                            manually select the root entity in the tree view
+                            once Godot has recovered. If you do not select the
+                            root entity manually you&#39;ll be moving the wrong
+                            thing most likely.
+                        </li>
+                        <li>
+                            If you wish to add/delete entities you will need to
+                            do that in QuickEntity Editor and then deploy your
+                            changes to the game with the framework and then
+                            export the map again and then open it in Godot.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_17_4: RpkgVersion = {
     id: "2.17.4",
     date: "5th January 2022",
     changelog: (
@@ -1530,6 +1629,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_17_4,
     VERSION_2_17_3,
     VERSION_2_17_2,
     VERSION_2_17_1,
