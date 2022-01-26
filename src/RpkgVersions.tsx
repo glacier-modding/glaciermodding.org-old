@@ -78,8 +78,14 @@ export const latest: RpkgVersion = {
                         <li>
                             You must use Godot v4 (Godot v3 will not work) which
                             you can grab from here:{" "}
-                            <a href="https://hugo.pro/projects/godot-builds/">
-                                https://hugo.pro/projects/godot-builds/
+                            <del>
+                                <a href="https://hugo.pro/projects/godot-builds/">
+                                    https://hugo.pro/projects/godot-builds/
+                                </a>
+                            </del>{" "}
+                            <strong>Update:</strong>{" "}
+                            <a href="https://godotengine.org/article/dev-snapshot-godot-4-0-alpha-1">
+                                https://godotengine.org/article/dev-snapshot-godot-4-0-alpha-1
                             </a>
                             .
                         </li>
