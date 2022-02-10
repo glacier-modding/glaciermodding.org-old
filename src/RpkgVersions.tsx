@@ -8,6 +8,57 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.19.0",
+    date: "10th February 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Fixed right click context menu for screens with
+                            custom DPI scaling.
+                        </li>
+                        <li>
+                            Added an extract to RT (ResourceTool) JSON function
+                            for files that RT has support for.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>CLI</strong>
+                    <ul>
+                        <li>
+                            Added &quot;-extract_to_rt_json&quot; for the new
+                            extract to RT JSON function.
+                        </li>
+                        <li>
+                            Added &quot;-generate_rpkg_quickly_from&quot;
+                            command which uses standard LZ4 compression instead
+                            of LZ4HC.
+                        </li>
+                        <li>
+                            Updated the output messages that
+                            &quot;-latest_hash&quot; produces.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            QuickEntity JSONs are not prettified anymore to help
+                            3rd party tools read them faster.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_18_0: RpkgVersion = {
     id: "2.18.0",
     date: "23rd January 2022",
     changelog: (
@@ -1635,6 +1686,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_18_0,
     VERSION_2_17_4,
     VERSION_2_17_3,
     VERSION_2_17_2,
