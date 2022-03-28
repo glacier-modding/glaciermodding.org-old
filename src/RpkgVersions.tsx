@@ -8,6 +8,50 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.20.0",
+    date: "28th March 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>Updated Discord Logo.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>CLI</strong>
+                    <ul>
+                        <li>
+                            Add TEMP/TBLU support to
+                            &quot;-extract_to_rt_json&quot;
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            Change ORES Extraction Method<sup>1</sup>.
+                        </li>
+                        <li>Upgraded ResourceLib from v2 to v3.</li>
+                        <li>Add success logs to hash meta commands.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                <sup>
+                    1. Changed the ORES extraction method and removed its
+                    reliance upon the hash list and instead pulls all the data
+                    necessary to extract the ORES files from the
+                    &quot;latest&quot; ORES hash file.
+                </sup>
+            </p>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_19_0: RpkgVersion = {
     id: "2.19.0",
     date: "10th February 2022",
     changelog: (
@@ -1686,6 +1730,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_19_0,
     VERSION_2_18_0,
     VERSION_2_17_4,
     VERSION_2_17_3,
