@@ -78,6 +78,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@corex/deepmerge@npm:^2.6.148":
+  version: 2.6.148
+  resolution: "@corex/deepmerge@npm:2.6.148"
+  checksum: b80b6b3e408901151de26e27b519a43cda1771a81e5390ff10cd6b47add0139bb315ca44112ff076d68ac887d7cfe237c9fb33868efb04839c4afb7c38864385
+  languageName: node
+  linkType: hard
+
 "@emotion/babel-plugin@npm:^11.3.0":
   version: 11.3.0
   resolution: "@emotion/babel-plugin@npm:11.3.0"
@@ -861,6 +868,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimist@npm:^1.2.6":
+  version: 1.2.6
+  resolution: "minimist@npm:1.2.6"
+  checksum: d15428cd1e11eb14e1233bcfb88ae07ed7a147de251441d61158619dfb32c4d7e9061d09cab4825fdee18ecd6fce323228c8c47b5ba7cd20af378ca4048fb3fb
+  languageName: node
+  linkType: hard
+
 "minimist@npm:~1.2.5":
   version: 1.2.5
   resolution: "minimist@npm:1.2.5"
@@ -884,6 +898,20 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 376717f0685251fad77850bd84c6b8d57837c71eeb1c05be7c742140cc1835a5a2953562add05166d6dbc8fb65f3fdffa356213037b967a470e1691dc3e7b9cc
+  languageName: node
+  linkType: hard
+
+"next-sitemap@npm:^2.5.17":
+  version: 2.5.17
+  resolution: "next-sitemap@npm:2.5.17"
+  dependencies:
+    "@corex/deepmerge": ^2.6.148
+    minimist: ^1.2.6
+  peerDependencies:
+    next: "*"
+  bin:
+    next-sitemap: bin/next-sitemap
+  checksum: f135847c5eff5d88cdb322615cf3b7175dded25073acf561cd38ca9aead1d44bf0694acb24575339fda8eb4eb459219dbe179b3e36a2fa058b794d33e3da10e9
   languageName: node
   linkType: hard
 
@@ -967,6 +995,7 @@ __metadata:
     "@types/react-dom": ^17.0.10
     clean-css: ^5.2.2
     next: ^12.1.1
+    next-sitemap: ^2.5.17
     prettier: ^2.4.1
     react: ^17.0.2
     react-dom: ^17.0.2
