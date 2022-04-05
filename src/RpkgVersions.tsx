@@ -8,6 +8,59 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.21.0",
+    date: "5th April 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            Fixed WWEM/WWES extraction<sup>1</sup>:
+                            <ul>
+                                <li>
+                                    Fixed issue where the output file names were
+                                    not correct.
+                                </li>
+                                <li>
+                                    Fixed issue with some output paths being too
+                                    long and exceeding the windows path length
+                                    limit by removing extract folders for
+                                    &#39;unknown&#39; paths.
+                                </li>
+                                <li>
+                                    Cleaned up the output such that only{" "}
+                                    <em>
+                                        .ogg files are now output instead of
+                                        having{" "}
+                                    </em>
+                                    .wem, *.ogg, the meta files, and the
+                                    &#39;dummy&#39; files having the hash file
+                                    names in them, so a total of a 4x reduction
+                                    in the numbers of files output.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            No longer extracts ORES hash meta files (example:
+                            lists.json_00B7C0E06A8B062A.JSON).
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                <sup>
+                    1. If WWEM/WWES extraction still fails, you are most likely
+                    hitting Windows&#39; character limit for paths, please try
+                    extracting to the root directory of your drive instead.
+                </sup>
+            </p>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_20_0: RpkgVersion = {
     id: "2.20.0",
     date: "28th March 2022",
     changelog: (
@@ -1730,6 +1783,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_20_0,
     VERSION_2_19_0,
     VERSION_2_18_0,
     VERSION_2_17_4,
