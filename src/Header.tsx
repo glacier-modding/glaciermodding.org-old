@@ -6,58 +6,16 @@ import MenuItem from "@mui/material/MenuItem"
 
 interface HeaderProps {
     logo?: JSX.Element
-    // for the xtea page, we take the next output and rewrite it
-    // it's an ugly hack to get the wasm to work, but oh well!
-    // blame tony I guess /shrug
-    // anything that isn't prerendered doesn't work as a result
-    isMessingWithNext?: boolean
 }
 
-export default function Header({
-    logo,
-    isMessingWithNext = false,
-}: HeaderProps) {
+export default function Header({ logo }: HeaderProps) {
     const [anchorEl, setAnchorEl] = React.useState(null)
     const open = Boolean(anchorEl)
-    const handleClick = (event) => setAnchorEl(event.currentTarget)
-    const handleClose = () => setAnchorEl(null)
-
-    function getDynamicMenuComponent(): JSX.Element {
-        return (
-            <>
-                <Button
-                    style={{
-                        fontSize: "1rem",
-                        textTransform: "none",
-                    }}
-                    variant={"text"}
-                    color={"inherit"}
-                    id="basic-button"
-                    aria-controls="basic-menu"
-                    aria-haspopup="true"
-                    aria-expanded={open ? "true" : undefined}
-                    onClick={handleClick}
-                >
-                    XTEA Tool
-                </Button>
-                <Menu
-                    id="basic-menu"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    MenuListProps={{
-                        "aria-labelledby": "basic-button",
-                    }}
-                >
-                    <MenuItem onClick={handleClose}>
-                        <a href="/tools/online/xtea">Online Tool</a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                        <a href="/tools/offline/h6xtea.7z">Offline Tool</a>
-                    </MenuItem>
-                </Menu>
-            </>
-        )
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget)
+    }
+    const handleClose = () => {
+        setAnchorEl(null)
     }
 
     return (
@@ -77,22 +35,39 @@ export default function Header({
                             >
                                 <Link href="/rpkg">RPKG Tool</Link>
                             </Button>
-                            {isMessingWithNext ? (
-                                <Button
-                                    style={{
-                                        fontSize: "1rem",
-                                        textTransform: "none",
-                                    }}
-                                    variant={"text"}
-                                    color={"inherit"}
-                                >
+                            <Button
+                                style={{
+                                    fontSize: "1rem",
+                                    textTransform: "none",
+                                }}
+                                variant={"text"}
+                                color={"inherit"}
+                                id="basic-button"
+                                aria-controls="basic-menu"
+                                aria-haspopup="true"
+                                aria-expanded={open ? "true" : undefined}
+                                onClick={handleClick}
+                            >
+                                XTEA Tool
+                            </Button>
+                            <Menu
+                                id="basic-menu"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                MenuListProps={{
+                                    "aria-labelledby": "basic-button",
+                                }}
+                            >
+                                <MenuItem onClick={handleClose}>
+                                    <a href="/tools/online/xtea">Online Tool</a>
+                                </MenuItem>
+                                <MenuItem onClick={handleClose}>
                                     <a href="/tools/offline/h6xtea.7z">
-                                        Offline XTEA Tool
+                                        Offline Tool
                                     </a>
-                                </Button>
-                            ) : (
-                                getDynamicMenuComponent()
-                            )}
+                                </MenuItem>
+                            </Menu>
                             <Button
                                 style={{
                                     fontSize: "1rem",
