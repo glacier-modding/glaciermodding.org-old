@@ -43,7 +43,7 @@ export default function Header({ logo }: HeaderProps) {
                                 variant={"text"}
                                 color={"inherit"}
                             >
-                                <Link href="/tools/online/xtea">XTEA Tool</Link>
+                                <Link href="/xtea">XTEA Tool</Link>
                             </Button>
                             <Button
                                 style={{
