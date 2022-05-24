@@ -42,32 +42,9 @@ export default function Header({ logo }: HeaderProps) {
                                 }}
                                 variant={"text"}
                                 color={"inherit"}
-                                id="basic-button"
-                                aria-controls="basic-menu"
-                                aria-haspopup="true"
-                                aria-expanded={open ? "true" : undefined}
-                                onClick={handleClick}
                             >
-                                XTEA Tool
+                                <Link href="/tools/online/xtea">XTEA Tool</Link>
                             </Button>
-                            <Menu
-                                id="basic-menu"
-                                anchorEl={anchorEl}
-                                open={open}
-                                onClose={handleClose}
-                                MenuListProps={{
-                                    "aria-labelledby": "basic-button",
-                                }}
-                            >
-                                <MenuItem onClick={handleClose}>
-                                    <a href="/tools/online/xtea">Online Tool</a>
-                                </MenuItem>
-                                <MenuItem onClick={handleClose}>
-                                    <a href="/tools/offline/h6xtea.7z">
-                                        Offline Tool
-                                    </a>
-                                </MenuItem>
-                            </Menu>
                             <Button
                                 style={{
                                     fontSize: "1rem",
