@@ -8,6 +8,40 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.21.1",
+    date: "25th May 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Hash Calculator no longer blocks access to other
+                            windows.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            ResourceLib
+                            <ul>
+                                <li>
+                                    Update ResourceLib for{" "}
+                                    <code>HITMAN 3 3.110.0.0</code>.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_21_0: RpkgVersion = {
     id: "2.21.0",
     date: "5th April 2022",
     changelog: (
@@ -1783,6 +1817,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_21_0,
     VERSION_2_20_0,
     VERSION_2_19_0,
     VERSION_2_18_0,
