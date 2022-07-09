@@ -8,6 +8,75 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.22.0",
+    date: "9th July 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            Material (MATI) Extraction And Rebuilding to and
+                            from MATI JSON files.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>CLI</strong>
+                    <ul>
+                        <li>
+                            -extract_mati_to_json - Extracts MATI
+                            file(s)/resources to MATI JSON files.
+                        </li>
+                        <li>
+                            -mati_to_json - Converts MATI files (and their .meta
+                            files) into MATI JSON files.
+                        </li>
+                        <li>
+                            -json_to_mati - Converts MATI JSON files into MATI
+                            files (and their .meta files).
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Material (MATI):
+                            <ul>
+                                <li>
+                                    Convert Single MATI (+.MATI.meta) file To
+                                    MATI JSON file.
+                                </li>
+                                <li>
+                                    Convert Single MATI JSON file To MATI
+                                    (+.MATI.meta) file.
+                                </li>
+                                <li>
+                                    Mass Convert MATI (+.MATI.meta) files To
+                                    MATI JSON files.
+                                </li>
+                                <li>
+                                    Mass Convert MATI JSON files To MATI
+                                    (+.MATI.meta) files.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Ability to filter by TYPE in the search tab.</li>
+                        <li>
+                            Clarify brick editor menu item labels (Thanks{" "}
+                            <a href="https://github.com/atampy25">atampy25</a>
+                            ).
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_21_1: RpkgVersion = {
     id: "2.21.1",
     date: "25th May 2022",
     changelog: (
@@ -1817,6 +1886,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_21_1,
     VERSION_2_21_0,
     VERSION_2_20_0,
     VERSION_2_19_0,
