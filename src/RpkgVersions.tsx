@@ -64,6 +64,7 @@ export const latest: RpkgVersion = {
                             corresponding CRC32 value and LOCR-linked language
                             strings
                         </li>
+                        <li>Dependency View 💀</li>
                     </ul>
                 </li>
                 <li>
