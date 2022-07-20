@@ -8,6 +8,116 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.23.0",
+    date: "20th July 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Repository (REPO) Editor
+                            <ul>
+                                <li>
+                                    Lets you edit a given REPO item&#39;s JSON
+                                    in a syntax highlighted JSON editor or in a
+                                    Visual Editor
+                                </li>
+                                <li>
+                                    Lists the the hash details (REPO item&#39;s
+                                    with Runtimes)
+                                </li>
+                                <li>
+                                    Lets you easily extract any Runtime REPO
+                                    item to QN (QuickEntity) JSON
+                                </li>
+                                <li>
+                                    Shows you the images of a given REPO item,
+                                    both Runtime REPO items and NPCs (if using
+                                    the Offline Image Pack mod)
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Deep Searching Entities and Localization
+                            <ul>
+                                <li>
+                                    Any/All loaded RPKGs will have their
+                                    Entities (TEMP/TBLU) searched for a given
+                                    entityId or entityName and display the
+                                    RPKG/TEMP found, along with the accompanying
+                                    subEntity data
+                                </li>
+                                <li>
+                                    Any/All loaded RPKGs will have their
+                                    localizations (DLGE, LOCR, RTLV) searched
+                                    for a given CRC32 value or string and
+                                    display the RPKG/DLGE/LOCR/RTLV found, along
+                                    with the accompanying CRC32 and string for
+                                    the found entry
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            LINE hash details now display the LINE&#39;s
+                            corresponding CRC32 value and LOCR-linked language
+                            strings
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>
+                        Sound Definition (SDEF) Extraction And Rebuilding to and
+                        from SDEF JSON files.
+                    </strong>
+                    <ul>
+                        <li>
+                            <strong>CLI</strong>
+                            <ul>
+                                <li>
+                                    -extract_sdef_to_json - Extracts SDEF
+                                    file(s)/resources to SDEF JSON files.
+                                </li>
+                                <li>
+                                    -sdef_to_json - Converts SDEF files (and
+                                    their .meta files) into SDEF JSON files.
+                                </li>
+                                <li>
+                                    -json_to_sdef - Converts SDEF JSON files
+                                    into SDEF files (and their .meta files).
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>GUI</strong>
+                            <ul>
+                                <li>
+                                    -Convert Single SDEF (+.SDEF.meta) file To
+                                    SDEF JSON file.
+                                </li>
+                                <li>
+                                    -Convert Single SDEF JSON file To SDEF
+                                    (+.SDEF.meta) file.
+                                </li>
+                                <li>
+                                    -Mass Convert SDEF (+.SDEF.meta) files To
+                                    SDEF JSON files.
+                                </li>
+                                <li>
+                                    -Mass Convert SDEF JSON files To SDEF
+                                    (+.SDEF.meta) files.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_22_0: RpkgVersion = {
     id: "2.22.0",
     date: "9th July 2022",
     changelog: (
@@ -1886,6 +1996,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_22_0,
     VERSION_2_21_1,
     VERSION_2_21_0,
     VERSION_2_20_0,
