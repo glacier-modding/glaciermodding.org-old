@@ -31,7 +31,7 @@ export default function Prepatched() {
                             download
                         >
                             <Button variant={"contained"}>
-                                Download for 3.110.1
+                                Download for 3.120.0
                             </Button>
                         </a>
                     </Grid>
