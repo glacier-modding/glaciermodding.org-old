@@ -8,6 +8,29 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.24.0",
+    date: "11th August 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li><strong>RPKG</strong><ul>
+                    <li>RPKGs import 8-10x faster.</li>
+                    <li>Support for extracting and rebuilding MRTR.</li>
+                </ul>
+                </li>
+                <li><strong>GUI</strong><ul>
+                    <li>Added right click support to GFXF resources for extracting GFx (Scaleform) + embedded texture files.</li>
+                    <li>Hashes not found within the hash list will now show up in search results.</li>
+                    <li>Hex viewer is faster.</li>
+                    <li>All treeviews and main textboxes can be zoomed in and out by holding Ctrl + Scrolling.</li>
+                </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_23_0: RpkgVersion = {
     id: "2.23.0",
     date: "20th July 2022",
     changelog: (
@@ -1997,6 +2020,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_23_0,
     VERSION_2_22_0,
     VERSION_2_21_1,
     VERSION_2_21_0,
