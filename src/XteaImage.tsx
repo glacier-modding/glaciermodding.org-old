@@ -1,7 +1,7 @@
 export default function XteaImage() {
     return (
         <div id="xtealogo">
-            <a href="/">Notex.app</a>
+            <a href="/">glaciermodding.org</a>
         </div>
     )
 }

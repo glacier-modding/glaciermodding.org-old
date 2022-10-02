@@ -31,7 +31,7 @@ export default function Rocco() {
         <div className="container">
             <PageSeo
                 title="Glacier 2 Engine - Tools and Resources"
-                description="Notex.app is a website dedicated to IO Interactive's Glacier 2 Engine. Home of some Tools and Resources. Join the modding community Discord."
+                description="glaciermodding.org is a website dedicated to IO Interactive's Glacier 2 Engine. Home of some Tools and Resources. Join the modding community Discord."
                 pageUrl="/rocco"
             />
 

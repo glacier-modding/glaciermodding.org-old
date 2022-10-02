@@ -21,7 +21,7 @@ export default function Header({ logo }: HeaderProps) {
     return (
         <header className="header">
             <span className="header-inner">
-                {logo !== void 0 ? logo : <Link href="/">Notex.app</Link>}
+                {logo !== void 0 ? logo : <Link href="/">glaciermodding.org</Link>}
                 <span className="header-right">
                     <nav className="menu">
                         <ul className="menu-inner">

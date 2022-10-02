@@ -12,7 +12,7 @@ export default function PageSeo({
     title,
     description,
 }: PageSeoProps): JSX.Element {
-    const name = `${title} - Notex.app`
+    const name = `${title} - glaciermodding.org`
 
     return (
         <Head>
@@ -31,10 +31,10 @@ export default function PageSeo({
             <meta name="twitter:title" content={name} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:dnt" content="on" />
-            <meta name="twitter:url" content={`https://notex.app${pageUrl}`} />
+            <meta name="twitter:url" content={`https://glaciermodding.org${pageUrl}`} />
             <link rel="author" href="https://twitter.com/Notex_" />
             <link rel="publisher" href="https://rdil.rocks" />
-            <link rel="canonical" href={`https://notex.app/${pageUrl}`} />
+            <link rel="canonical" href={`https://glaciermodding.org/${pageUrl}`} />
             <meta itemProp="name" content={name} />
         </Head>
     )

@@ -132,7 +132,7 @@ export default function Rpkg({ allVersions }) {
                         </Button>
                     </Link>
 
-                    <Link href={`https://wiki.notex.app`}>
+                    <Link href={`https://wiki.glaciermodding.org`}>
                         <Button
                             variant={"outlined"}
                             color={"primary"}

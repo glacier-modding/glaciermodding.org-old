@@ -8,7 +8,7 @@ export default function XteaRedirect(): JSX.Element {
                 <title>Redirecting...</title>
                 <meta
                     httpEquiv="refresh"
-                    content="0;URL='https://notex.app/tools/online/xtea'"
+                    content="0;URL='https://glaciermodding.org/tools/online/xtea'"
                 />
             </Head>
             <main>

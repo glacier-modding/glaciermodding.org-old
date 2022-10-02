@@ -6,7 +6,7 @@ export default function Custom404() {
     return (
         <div className="container">
             <Head>
-                <title>Notex.app - Page not found</title>
+                <title>glaciermodding.org - Page not found</title>
             </Head>
 
             <Header />
