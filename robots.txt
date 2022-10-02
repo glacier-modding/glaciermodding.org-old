@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://notex.app
+Host: https://glaciermodding.org
 
 # Sitemaps
-Sitemap: https://notex.app/sitemap.xml
+Sitemap: https://glaciermodding.org/sitemap.xml

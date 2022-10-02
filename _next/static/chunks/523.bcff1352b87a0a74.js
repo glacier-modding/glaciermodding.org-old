@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[523],{9523:function(e,n,r){r.r(n),r.d(n,{default:function(){return u}});var i=r(5893);function u(){return(0,i.jsx)("div",{id:"xtealogo",children:(0,i.jsx)("a",{href:"/",children:"glaciermodding.org"})})}}}]);
