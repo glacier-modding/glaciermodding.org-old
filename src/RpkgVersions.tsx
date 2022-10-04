@@ -1807,8 +1807,8 @@ export const VERSION_2_0_0: RpkgVersion = {
                         <li>
                             You can also search for known hashes using this
                             site:{" "}
-                            <a href="https://hitmandb.notex.app">
-                                https://hitmandb.notex.app
+                            <a href="https://hitmandb.glaciermodding.org">
+                                https://hitmandb.glaciermodding.org
                             </a>
                         </li>
                     </ul>

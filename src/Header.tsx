@@ -53,7 +53,7 @@ export default function Header({ logo }: HeaderProps) {
                                 variant={"text"}
                                 color={"inherit"}
                             >
-                                <a href="https://hitmandb.notex.app">
+                                <a href="https://hitmandb.glaciermodding.org">
                                     HitmanDB
                                 </a>
                             </Button>
