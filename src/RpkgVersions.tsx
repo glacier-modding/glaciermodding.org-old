@@ -6,8 +6,33 @@ export interface RpkgVersion {
     date: string
     zhmtools?: boolean
 }
-
 export const latest: RpkgVersion = {
+    id: "2.25.0",
+    date: "5th October 2022",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li><strong>RPKG</strong><ul>
+                    <li>Updated WWEM function.</li>
+                    <li>Clarify the QN version that RPKG currently extracts to.</li>
+                    <li>Updated all URLs to the new domain (<a href="https://glaciermodding.org">https://glaciermodding.org</a>).</li>
+                </ul>
+                </li>
+                <li><strong>GUI</strong><ul>
+                    <li>Allow loading multiple RPKG folders (May cause some functions that depend on latest hashes to break like extracting QN).</li>
+                    <li>Add BOXC to the resource type filter (Not really sure how this was missing before).</li>
+                </ul>
+                </li>
+                <li><strong>CLI</strong><ul>
+                    <li>Fixed <code>-dev_hash_list_percent_found</code> dev command.</li>
+                </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_24_0: RpkgVersion = {
     id: "2.24.0",
     date: "11th August 2022",
     changelog: (
@@ -2020,6 +2045,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_24_0,
     VERSION_2_23_0,
     VERSION_2_22_0,
     VERSION_2_21_1,
