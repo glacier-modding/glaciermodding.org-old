@@ -1,4 +1,7 @@
 <main id="main">
+    <div id="load">
+        <span onclick="loadFile();"> Load File </span>
+    </div>
     <div id="save">
         <span onclick="saveFile();"> Save File </span>
         <span onclick="autopatch();"> Set Patch Levels </span>
@@ -307,6 +310,19 @@
             }
             reader.onerror = () => rej("error while reading")
             reader.readAsArrayBuffer(file)
+        }
+
+        function loadFile() {
+            let input = document.createElement("input");
+            input.type = "file";
+            input.accept = ".dat,.txt";
+            input.multiple = false;
+            input.onchange = (event) => {
+                let file = event.target.files[0];
+                document.getElementById("naming-field").value = file.name;
+                attemptDecipher(file);
+            };
+            input.click();
         }
 
         function dropHandler(ev) {

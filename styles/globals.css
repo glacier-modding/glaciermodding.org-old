@@ -148,11 +148,32 @@ code {
     font-size: 0.95rem;
 }
 
-#save {
+#load {
     display: block;
     position: absolute;
     top: 23px;
     left: 150px;
+}
+
+#load span{
+    color: #05be99;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid #05be99;
+    margin: 0 1em;
+}
+
+#load span:hover {
+    background: #111111;
+}
+
+#save {
+    display: block;
+    position: absolute;
+    top: 23px;
+    left: 255px;
 }
 
 .buttons {
