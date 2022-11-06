@@ -31,10 +31,16 @@ export default function PageSeo({
             <meta name="twitter:title" content={name} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:dnt" content="on" />
-            <meta name="twitter:url" content={`https://glaciermodding.org${pageUrl}`} />
+            <meta
+                name="twitter:url"
+                content={`https://glaciermodding.org${pageUrl}`}
+            />
             <link rel="author" href="https://twitter.com/Notex_" />
             <link rel="publisher" href="https://rdil.rocks" />
-            <link rel="canonical" href={`https://glaciermodding.org/${pageUrl}`} />
+            <link
+                rel="canonical"
+                href={`https://glaciermodding.org/${pageUrl}`}
+            />
             <meta itemProp="name" content={name} />
         </Head>
     )

@@ -1,27 +1,20 @@
 import Link from "next/link"
 import * as React from "react"
 import Button from "@mui/material/Button"
-import Menu from "@mui/material/Menu"
-import MenuItem from "@mui/material/MenuItem"
 
 interface HeaderProps {
     logo?: JSX.Element
 }
 
 export default function Header({ logo }: HeaderProps) {
-    const [anchorEl, setAnchorEl] = React.useState(null)
-    const open = Boolean(anchorEl)
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget)
-    }
-    const handleClose = () => {
-        setAnchorEl(null)
-    }
-
     return (
         <header className="header">
             <span className="header-inner">
-                {logo !== void 0 ? logo : <Link href="/">glaciermodding.org</Link>}
+                {logo !== void 0 ? (
+                    logo
+                ) : (
+                    <Link href="/">glaciermodding.org</Link>
+                )}
                 <span className="header-right">
                     <nav className="menu">
                         <ul className="menu-inner">

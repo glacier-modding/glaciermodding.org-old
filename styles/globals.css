@@ -155,7 +155,7 @@ code {
     left: 150px;
 }
 
-#load span{
+#load span {
     color: #05be99;
     padding: 5px;
     font-size: 16px;
@@ -183,8 +183,7 @@ code {
     border: none;
     cursor: pointer;
     border-bottom: 2px solid #05be99;
-    margin: 0 1em;
-    margin-bottom: 20px;
+    margin: 0 1em 20px;
 }
 
 .button-color-white {
