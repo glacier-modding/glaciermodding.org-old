@@ -66,6 +66,38 @@ function DownloadZHMToolsButton({ versionId }: DownloadButtonProps) {
     )
 }
 
+function DownloadRPKGGUIButton({ versionId }: DownloadButtonProps) {
+    return (
+        <Link
+            href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}-gui.zip`}
+        >
+            <Button
+                variant={"contained"}
+                color={"secondary"}
+                startIcon={<GetApp />}
+            >
+                Download RPKG GUI
+            </Button>
+        </Link>
+    )
+}
+
+function DownloadRPKGCLIButton({ versionId }: DownloadButtonProps) {
+    return (
+        <Link
+            href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${versionId}/rpkg_v${versionId}-cli.zip`}
+        >
+            <Button
+                variant={"contained"}
+                color={"primary"}
+                startIcon={<GetApp />}
+            >
+                Download RPKG CLI
+            </Button>
+        </Link>
+    )
+}
+
 export async function getStaticProps() {
     // we should probably check why these 2 constants need to
     // be out of hooks
@@ -145,17 +177,27 @@ export default function Rpkg({ allVersions }) {
 
                 <AccordionActions>
                     <Link
-                        href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${latest.id}/rpkg_v${latest.id}.zip`}
+                        href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${latest.id}/rpkg_v${latest.id}-gui.zip`}
                     >
                         <Button
                             variant={"outlined"}
                             color={"secondary"}
                             startIcon={<GetApp />}
                         >
-                            Latest Release Build v{latest.id}
+                            Latest GUI Release Build v{latest.id}
                         </Button>
                     </Link>
-
+                    <Link
+                        href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${latest.id}/rpkg_v${latest.id}-cli.zip`}
+                    >
+                        <Button
+                            variant={"outlined"}
+                            color={"primary"}
+                            startIcon={<GetApp />}
+                        >
+                            Latest CLI Release Build v{latest.id}
+                        </Button>
+                    </Link>
                     <Link href={`https://nightly.link/glacier-modding/RPKG-Tool/workflows/build/main/rpkg.zip`}>
                         <Button
                             variant={"outlined"}
@@ -214,7 +256,16 @@ export default function Rpkg({ allVersions }) {
                             </div>
                         </AccordionDetails>
                         <AccordionActions>
-                            <DownloadButton versionId={v.id} />
+                            {v.newdownloadformat ? (
+                                <DownloadRPKGGUIButton versionId={v.id} />
+                            ) : (
+                                <DownloadButton versionId={v.id} />
+                            )}
+                            {v.newdownloadformat ? (
+                                <DownloadRPKGCLIButton versionId={v.id} />
+                            ) : (
+                                <DownloadButton versionId={v.id} />
+                            )}
                             <DownloadSrcButton versionId={v.id} />
                             {v.zhmtools && (
                                 <DownloadZHMToolsButton versionId={v.id} />
