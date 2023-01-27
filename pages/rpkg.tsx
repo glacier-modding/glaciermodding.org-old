@@ -258,16 +258,14 @@ export default function Rpkg({ allVersions }) {
                             </div>
                         </AccordionDetails>
                         <AccordionActions>
-                            {v.newdownloadformat ? (
-                                <DownloadRPKGGUIButton versionId={v.id} />
-                            ) : (
+                            {v.newdownloadformat ?
+                                [
+                                    <DownloadRPKGGUIButton versionId={v.id} />,
+                                    <DownloadRPKGCLIButton versionId={v.id} />,
+                                ]
+                                :
                                 <DownloadButton versionId={v.id} />
-                            )}
-                            {v.newdownloadformat ? (
-                                <DownloadRPKGCLIButton versionId={v.id} />
-                            ) : (
-                                <DownloadButton versionId={v.id} />
-                            )}
+                            }
                             <DownloadSrcButton versionId={v.id} />
                             {v.zhmtools && (
                                 <DownloadZHMToolsButton versionId={v.id} />
