@@ -198,7 +198,10 @@ export default function Rpkg({ allVersions }) {
                             Latest CLI Release Build v{latest.id}
                         </Button>
                     </Link>
-                    <Link href={`https://nightly.link/glacier-modding/RPKG-Tool/workflows/build/main/rpkg.zip`}>
+
+                    <Link
+                        href={`https://nightly.link/glacier-modding/RPKG-Tool/workflows/build/main/rpkg.zip`}
+                    >
                         <Button
                             variant={"outlined"}
                             color={"warning"}
@@ -207,7 +210,6 @@ export default function Rpkg({ allVersions }) {
                             Nightly Build
                         </Button>
                     </Link>
-
                 </AccordionActions>
 
                 <i className="subnote">

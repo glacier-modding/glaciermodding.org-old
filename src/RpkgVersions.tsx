@@ -58,20 +58,45 @@ export const VERSION_2_25_0: RpkgVersion = {
     changelog: (
         <React.Fragment>
             <ul>
-                <li><strong>RPKG</strong><ul>
-                    <li>Updated WWEM function.</li>
-                    <li>Clarify the QN version that RPKG currently extracts to.</li>
-                    <li>Updated all URLs to the new domain (<a href="https://glaciermodding.org">https://glaciermodding.org</a>).</li>
-                </ul>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>Updated WWEM function.</li>
+                        <li>
+                            Clarify the QN version that RPKG currently extracts
+                            to.
+                        </li>
+                        <li>
+                            Updated all URLs to the new domain (
+                            <a href="https://glaciermodding.org">
+                                https://glaciermodding.org
+                            </a>
+                            ).
+                        </li>
+                    </ul>
                 </li>
-                <li><strong>GUI</strong><ul>
-                    <li>Allow loading multiple RPKG folders (May cause some functions that depend on latest hashes to break like extracting QN).</li>
-                    <li>Add BOXC to the resource type filter (Not really sure how this was missing before).</li>
-                </ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Allow loading multiple RPKG folders (May cause some
+                            functions that depend on latest hashes to break like
+                            extracting QN).
+                        </li>
+                        <li>
+                            Add BOXC to the resource type filter (Not really
+                            sure how this was missing before).
+                        </li>
+                    </ul>
                 </li>
-                <li><strong>CLI</strong><ul>
-                    <li>Fixed <code>-dev_hash_list_percent_found</code> dev command.</li>
-                </ul>
+                <li>
+                    <strong>CLI</strong>
+                    <ul>
+                        <li>
+                            Fixed <code>-dev_hash_list_percent_found</code> dev
+                            command.
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </React.Fragment>
@@ -84,17 +109,30 @@ export const VERSION_2_24_0: RpkgVersion = {
     changelog: (
         <React.Fragment>
             <ul>
-                <li><strong>RPKG</strong><ul>
-                    <li>RPKGs import 8-10x faster.</li>
-                    <li>Support for extracting and rebuilding MRTR.</li>
-                </ul>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>RPKGs import 8-10x faster.</li>
+                        <li>Support for extracting and rebuilding MRTR.</li>
+                    </ul>
                 </li>
-                <li><strong>GUI</strong><ul>
-                    <li>Added right click support to GFXF resources for extracting GFx (Scaleform) + embedded texture files.</li>
-                    <li>Hashes not found within the hash list will now show up in search results.</li>
-                    <li>Hex viewer is faster.</li>
-                    <li>All treeviews and main textboxes can be zoomed in and out by holding Ctrl + Scrolling.</li>
-                </ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Added right click support to GFXF resources for
+                            extracting GFx (Scaleform) + embedded texture files.
+                        </li>
+                        <li>
+                            Hashes not found within the hash list will now show
+                            up in search results.
+                        </li>
+                        <li>Hex viewer is faster.</li>
+                        <li>
+                            All treeviews and main textboxes can be zoomed in
+                            and out by holding Ctrl + Scrolling.
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </React.Fragment>
