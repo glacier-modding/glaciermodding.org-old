@@ -5,8 +5,54 @@ export interface RpkgVersion {
     changelog: React.ReactElement
     date: string
     zhmtools?: boolean
+    newdownloadformat?: boolean
 }
+
 export const latest: RpkgVersion = {
+    id: "2.26.0",
+    date: "27th January 2023",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li><strong>RPKG</strong><ul>
+                    <li>Material (MATI/MATT/MATB) Extraction and rebuilding to and from Material JSON files (*.material.json).<ul>
+                        <li>Two new functions:<ul>
+                            <li>-extract_material_to_json (extracts Material (MATI/MATT/MATB) resources into a unified Material JSON file).</li>
+                            <li>-json_to_material  (converts Material JSON files into MATI/MATT/MATB files with their respective .meta files).<ul>
+                                <li>Added to the Rebuild menu in the GUI the option:</li>
+                                <li>Rebuild Material JSON File(s) To MATI/MATT/MATB Files (which lets you rebuild single *.material.json files or folders (recursive) containing such to MATI/MATT/MATB files with their respective .meta files).</li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><strong>GUI</strong><ul>
+                    <li>Brick Editor is now read only due to QuickEntity and QuickEntity Editor superseding it.</li>
+                    <li>Hash calculator now searches loaded RPKGs along with the Hash List.<ul>
+                        <li>The three results are now:<ul>
+                            <li>&quot;Found in hash list&quot;.</li>
+                            <li>&quot;Not found in hash list&quot;.</li>
+                            <li>&quot;(NEW) Found in game, not in hash list&quot;.</li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><strong>CLI</strong><ul>
+                    <li>Removed <code>-dev_extract_all_strings</code> dev command.</li>
+                </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+    newdownloadformat: true,
+}
+
+export const VERSION_2_25_0: RpkgVersion = {
     id: "2.25.0",
     date: "5th October 2022",
     changelog: (
@@ -2045,6 +2091,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_25_0,
     VERSION_2_24_0,
     VERSION_2_23_0,
     VERSION_2_22_0,
