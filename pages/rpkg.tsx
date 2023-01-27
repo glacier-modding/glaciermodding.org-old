@@ -50,6 +50,22 @@ function DownloadSrcButton({ versionId }: DownloadButtonProps) {
     )
 }
 
+function DownloadNewSrcButton({ versionId }: DownloadButtonProps) {
+    return (
+        <Link
+            href={`https://github.com/glacier-modding/RPKG-Tool/archive/refs/tags/v${versionId}.zip`}
+        >
+            <Button
+                variant={"contained"}
+                color={"primary"}
+                startIcon={<GetApp />}
+            >
+                Download Source
+            </Button>
+        </Link>
+    )
+}
+
 function DownloadZHMToolsButton({ versionId }: DownloadButtonProps) {
     return (
         <Link
@@ -262,11 +278,15 @@ export default function Rpkg({ allVersions }) {
                                 [
                                     <DownloadRPKGGUIButton versionId={v.id} />,
                                     <DownloadRPKGCLIButton versionId={v.id} />,
+                                    <DownloadNewSrcButton versionId={v.id} />
                                 ]
                                 :
-                                <DownloadButton versionId={v.id} />
+                                [
+                                <DownloadButton versionId={v.id} />,
+                                <DownloadSrcButton versionId={v.id} />
+                                ]
                             }
-                            <DownloadSrcButton versionId={v.id} />
+                            
                             {v.zhmtools && (
                                 <DownloadZHMToolsButton versionId={v.id} />
                             )}
