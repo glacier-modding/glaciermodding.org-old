@@ -199,7 +199,7 @@ export default function Rpkg({ allVersions }) {
                         </Button>
                     </Link>
 
-                    <Link
+                    {/* <Link
                         href={`https://nightly.link/glacier-modding/RPKG-Tool/workflows/build/main/rpkg.zip`}
                     >
                         <Button
@@ -209,7 +209,7 @@ export default function Rpkg({ allVersions }) {
                         >
                             Nightly Build
                         </Button>
-                    </Link>
+                    </Link> */}
                 </AccordionActions>
 
                 <i className="subnote">
