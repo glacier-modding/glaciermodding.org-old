@@ -5,7 +5,7 @@ export interface RpkgVersion {
     changelog: React.ReactElement
     date: string
     zhmtools?: boolean
-    newdownloadformat?: boolean
+    olddownloadformat?: boolean
 }
 
 export const latest: RpkgVersion = {
@@ -49,7 +49,6 @@ export const latest: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
-    newdownloadformat: true,
 }
 
 export const VERSION_2_25_0: RpkgVersion = {
@@ -101,6 +100,7 @@ export const VERSION_2_25_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_24_0: RpkgVersion = {
@@ -137,6 +137,7 @@ export const VERSION_2_24_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_23_0: RpkgVersion = {
@@ -248,6 +249,7 @@ export const VERSION_2_23_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_22_0: RpkgVersion = {
@@ -317,6 +319,7 @@ export const VERSION_2_22_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_21_1: RpkgVersion = {
@@ -351,6 +354,7 @@ export const VERSION_2_21_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_21_0: RpkgVersion = {
@@ -404,6 +408,7 @@ export const VERSION_2_21_0: RpkgVersion = {
             </p>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_20_0: RpkgVersion = {
@@ -448,6 +453,7 @@ export const VERSION_2_20_0: RpkgVersion = {
             </p>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_19_0: RpkgVersion = {
@@ -499,6 +505,7 @@ export const VERSION_2_19_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_18_0: RpkgVersion = {
@@ -604,6 +611,7 @@ export const VERSION_2_18_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_17_4: RpkgVersion = {
@@ -747,6 +755,7 @@ export const VERSION_2_17_4: RpkgVersion = {
             ></img>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_17_3: RpkgVersion = {
@@ -830,6 +839,7 @@ export const VERSION_2_17_3: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_17_2: RpkgVersion = {
@@ -866,6 +876,7 @@ export const VERSION_2_17_2: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_17_1: RpkgVersion = {
@@ -888,6 +899,7 @@ export const VERSION_2_17_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_17_0: RpkgVersion = {
@@ -964,6 +976,7 @@ export const VERSION_2_17_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_16_3: RpkgVersion = {
@@ -1020,6 +1033,7 @@ export const VERSION_2_16_3: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_16_2: RpkgVersion = {
@@ -1051,6 +1065,7 @@ export const VERSION_2_16_2: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_16_1: RpkgVersion = {
@@ -1088,6 +1103,7 @@ export const VERSION_2_16_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_16_0: RpkgVersion = {
@@ -1110,6 +1126,7 @@ export const VERSION_2_16_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_15_1: RpkgVersion = {
@@ -1129,6 +1146,7 @@ export const VERSION_2_15_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_15_0: RpkgVersion = {
@@ -1168,6 +1186,7 @@ export const VERSION_2_15_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_14_0: RpkgVersion = {
@@ -1201,6 +1220,7 @@ export const VERSION_2_14_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
     zhmtools: true,
 }
 
@@ -1273,6 +1293,7 @@ export const VERSION_2_13_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
     zhmtools: true,
 }
 
@@ -1305,6 +1326,7 @@ export const VERSION_2_12_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
     zhmtools: true,
 }
 
@@ -1321,6 +1343,7 @@ export const VERSION_2_11_2: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_11_1: RpkgVersion = {
@@ -1340,6 +1363,7 @@ export const VERSION_2_11_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_11_0: RpkgVersion = {
@@ -1363,6 +1387,7 @@ export const VERSION_2_11_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_10_0: RpkgVersion = {
@@ -1417,6 +1442,7 @@ export const VERSION_2_10_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_9_0: RpkgVersion = {
@@ -1476,6 +1502,7 @@ export const VERSION_2_9_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_8_0: RpkgVersion = {
@@ -1590,6 +1617,7 @@ export const VERSION_2_8_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_7_0: RpkgVersion = {
@@ -1650,6 +1678,7 @@ export const VERSION_2_7_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_6_0: RpkgVersion = {
@@ -1708,6 +1737,7 @@ export const VERSION_2_6_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_5_0: RpkgVersion = {
@@ -1740,6 +1770,7 @@ export const VERSION_2_5_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_4_0: RpkgVersion = {
@@ -1760,6 +1791,7 @@ export const VERSION_2_4_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_3_1: RpkgVersion = {
@@ -1773,6 +1805,7 @@ export const VERSION_2_3_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_3_0: RpkgVersion = {
@@ -1790,6 +1823,7 @@ export const VERSION_2_3_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_2_0: RpkgVersion = {
@@ -1803,6 +1837,7 @@ export const VERSION_2_2_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_1_0: RpkgVersion = {
@@ -1839,6 +1874,7 @@ export const VERSION_2_1_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_0_1: RpkgVersion = {
@@ -1874,6 +1910,7 @@ export const VERSION_2_0_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_2_0_0: RpkgVersion = {
@@ -1925,6 +1962,7 @@ export const VERSION_2_0_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_3_0: RpkgVersion = {
@@ -1969,6 +2007,7 @@ export const VERSION_1_3_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_2_1: RpkgVersion = {
@@ -1985,6 +2024,7 @@ export const VERSION_1_2_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_2_0: RpkgVersion = {
@@ -2008,6 +2048,7 @@ export const VERSION_1_2_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_1_1: RpkgVersion = {
@@ -2028,6 +2069,7 @@ export const VERSION_1_1_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_1_0: RpkgVersion = {
@@ -2062,6 +2104,7 @@ export const VERSION_1_1_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_0_3: RpkgVersion = {
@@ -2077,6 +2120,7 @@ export const VERSION_1_0_3: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_0_2: RpkgVersion = {
@@ -2097,6 +2141,7 @@ export const VERSION_1_0_2: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_0_1: RpkgVersion = {
@@ -2113,6 +2158,7 @@ export const VERSION_1_0_1: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const VERSION_1_0_0: RpkgVersion = {
@@ -2125,6 +2171,7 @@ export const VERSION_1_0_0: RpkgVersion = {
             </ul>
         </React.Fragment>
     ),
+    olddownloadformat: true,
 }
 
 export const versions: RpkgVersion[] = [

@@ -92,7 +92,7 @@ function DownloadRPKGGUIButton({ versionId }: DownloadButtonProps) {
                 color={"secondary"}
                 startIcon={<GetApp />}
             >
-                Download RPKG GUI
+                Download GUI v{versionId}
             </Button>
         </Link>
     )
@@ -108,7 +108,7 @@ function DownloadRPKGCLIButton({ versionId }: DownloadButtonProps) {
                 color={"primary"}
                 startIcon={<GetApp />}
             >
-                Download RPKG CLI
+                Download CLI v{versionId}
             </Button>
         </Link>
     )
@@ -200,7 +200,7 @@ export default function Rpkg({ allVersions }) {
                             color={"secondary"}
                             startIcon={<GetApp />}
                         >
-                            Latest GUI Release Build v{latest.id}
+                            Download Latest GUI v{latest.id}
                         </Button>
                     </Link>
                     <Link
@@ -211,7 +211,7 @@ export default function Rpkg({ allVersions }) {
                             color={"primary"}
                             startIcon={<GetApp />}
                         >
-                            Latest CLI Release Build v{latest.id}
+                            Download Latest CLI v{latest.id}
                         </Button>
                     </Link>
 
@@ -274,16 +274,16 @@ export default function Rpkg({ allVersions }) {
                             </div>
                         </AccordionDetails>
                         <AccordionActions>
-                            {v.newdownloadformat ?
+                            {v.olddownloadformat ?
                                 [
-                                    <DownloadRPKGGUIButton versionId={v.id} />,
-                                    <DownloadRPKGCLIButton versionId={v.id} />,
-                                    <DownloadNewSrcButton versionId={v.id} />
+                                    <DownloadButton versionId={v.id} />,
+                                    <DownloadSrcButton versionId={v.id} />                                    
                                 ]
                                 :
-                                [
-                                <DownloadButton versionId={v.id} />,
-                                <DownloadSrcButton versionId={v.id} />
+                                [                                
+                                <DownloadRPKGGUIButton versionId={v.id} />,
+                                <DownloadRPKGCLIButton versionId={v.id} />,
+                                <DownloadNewSrcButton versionId={v.id} />
                                 ]
                             }
                             
