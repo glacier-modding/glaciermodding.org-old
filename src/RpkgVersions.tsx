@@ -9,42 +9,143 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.27.0",
+    date: "23rd February 2023",
+    changelog: (
+        <React.Fragment>
+            <ul>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            ASVA (Animation Set Variation) extracting and
+                            rebuilding support.
+                        </li>
+                        <li>
+                            Extract to latest hash function
+                            (-extract_latest_hash).
+                        </li>
+                        <li>
+                            Updated DLGE&#39;s language list to match Hitman 3.
+                        </li>
+                        <li>Entity to QN JSON upgraded to QN v3.1.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Updated deep search for entity searching:
+                            <ul>
+                                <li>
+                                    Entity Deep Search can now search with
+                                    multiple strings, using AND / OR logic, and
+                                    each of the strings can be either a normal
+                                    search string or a regex string, both being
+                                    case insensitive by default.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Fix default output folder when extracting asva.json,
+                            material.json and entity.json.
+                        </li>
+                        <li>
+                            Support for extracting ENUM resources to RT JSON.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_26_0: RpkgVersion = {
     id: "2.26.0",
     date: "27th January 2023",
     changelog: (
         <React.Fragment>
             <ul>
-                <li><strong>RPKG</strong><ul>
-                    <li>Material (MATI/MATT/MATB) Extraction and rebuilding to and from Material JSON files (*.material.json).<ul>
-                        <li>Two new functions:<ul>
-                            <li>-extract_material_to_json (extracts Material (MATI/MATT/MATB) resources into a unified Material JSON file).</li>
-                            <li>-json_to_material  (converts Material JSON files into MATI/MATT/MATB files with their respective .meta files).<ul>
-                                <li>Added to the Rebuild menu in the GUI the option:</li>
-                                <li>Rebuild Material JSON File(s) To MATI/MATT/MATB Files (which lets you rebuild single *.material.json files or folders (recursive) containing such to MATI/MATT/MATB files with their respective .meta files).</li>
+                <li>
+                    <strong>RPKG</strong>
+                    <ul>
+                        <li>
+                            Material (MATI/MATT/MATB) Extraction and rebuilding
+                            to and from Material JSON files (*.material.json).
+                            <ul>
+                                <li>
+                                    Two new functions:
+                                    <ul>
+                                        <li>
+                                            -extract_material_to_json (extracts
+                                            Material (MATI/MATT/MATB) resources
+                                            into a unified Material JSON file).
+                                        </li>
+                                        <li>
+                                            -json_to_material (converts Material
+                                            JSON files into MATI/MATT/MATB files
+                                            with their respective .meta files).
+                                            <ul>
+                                                <li>
+                                                    Added to the Rebuild menu in
+                                                    the GUI the option:
+                                                </li>
+                                                <li>
+                                                    Rebuild Material JSON
+                                                    File(s) To MATI/MATT/MATB
+                                                    Files (which lets you
+                                                    rebuild single
+                                                    *.material.json files or
+                                                    folders (recursive)
+                                                    containing such to
+                                                    MATI/MATT/MATB files with
+                                                    their respective .meta
+                                                    files).
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
-                            </li>
-                        </ul>
                         </li>
                     </ul>
-                    </li>
-                </ul>
                 </li>
-                <li><strong>GUI</strong><ul>
-                    <li>Brick Editor is now read only due to QuickEntity and QuickEntity Editor superseding it.</li>
-                    <li>Hash calculator now searches loaded RPKGs along with the Hash List.<ul>
-                        <li>The three results are now:<ul>
-                            <li>&quot;Found in hash list&quot;.</li>
-                            <li>&quot;Not found in hash list&quot;.</li>
-                            <li>&quot;(NEW) Found in game, not in hash list&quot;.</li>
-                        </ul>
+                <li>
+                    <strong>GUI</strong>
+                    <ul>
+                        <li>
+                            Brick Editor is now read only due to QuickEntity and
+                            QuickEntity Editor superseding it.
+                        </li>
+                        <li>
+                            Hash calculator now searches loaded RPKGs along with
+                            the Hash List.
+                            <ul>
+                                <li>
+                                    The three results are now:
+                                    <ul>
+                                        <li>&quot;Found in hash list&quot;.</li>
+                                        <li>
+                                            &quot;Not found in hash list&quot;.
+                                        </li>
+                                        <li>
+                                            &quot;(NEW) Found in game, not in
+                                            hash list&quot;.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                    </li>
-                </ul>
                 </li>
-                <li><strong>CLI</strong><ul>
-                    <li>Removed <code>-dev_extract_all_strings</code> dev command.</li>
-                </ul>
+                <li>
+                    <strong>CLI</strong>
+                    <ul>
+                        <li>
+                            Removed <code>-dev_extract_all_strings</code> dev
+                            command.
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </React.Fragment>
@@ -2176,6 +2277,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_26_0,
     VERSION_2_25_0,
     VERSION_2_24_0,
     VERSION_2_23_0,
