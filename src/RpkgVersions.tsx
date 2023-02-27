@@ -9,6 +9,46 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.28.0",
+    date: "27th February 2023",
+    changelog: (
+        <React.Fragment>
+            <h2 id="new-features">New Features</h2>
+            <ul>
+                <li>
+                    Added &#39;Restrict Results To Selected RPKG&#39; to the
+                    Entity Deep Search which can be enabled when you select a
+                    specific RPKG to search through. When enabled it will not
+                    display results if a given entity&#39;s &#39;latest
+                    hash&#39; (current, game used) resides in another RPKG file
+                    than the specific one chosen.
+                </li>
+                <li>
+                    Added a new &#39;Save All Search Results To JSON File&#39;
+                    feature/button that shows up after an Entity Deep Search in
+                    completed or stopped and allows you to export the search
+                    terms and results into a single output JSON file.
+                </li>
+            </ul>
+            <h2 id="bug-fixes">Bug Fixes</h2>
+            <ul>
+                <li>
+                    Fixed issue where &#39;_&#39; was not being properly
+                    displayed in the regex validity error message when trying to
+                    Entity Deep Search with invalid regex.
+                </li>
+                <li>
+                    Fixed an issue caused by the last update (with
+                    multi-searches and regex) that resulted in some searches for
+                    entity ids not being displayed properly even if they were
+                    actually found.
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_27_0: RpkgVersion = {
     id: "2.27.0",
     date: "23rd February 2023",
     changelog: (
@@ -2277,6 +2317,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_27_0,
     VERSION_2_26_0,
     VERSION_2_25_0,
     VERSION_2_24_0,
