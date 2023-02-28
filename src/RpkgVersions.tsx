@@ -16,6 +16,31 @@ export const latest: RpkgVersion = {
             <h2 id="new-features">New Features</h2>
             <ul>
                 <li>
+                    Added the ability to select a search &#39;category&#39; on a
+                    per search item/term basis in Deep Search for entities.
+                    <ul>
+                        <li>
+                            The categories include:
+                            <ul>
+                                <li>ALL</li>
+                                <li>tempHash (or IOI Path of)</li>
+                                <li>tbluHash (or IOI Path of)</li>
+                                <li>rootEntity</li>
+                                <li>entities</li>
+                                <li>propertyOverrides</li>
+                                <li>overrideDeletes</li>
+                                <li>pinConnectionOverrides</li>
+                                <li>pinConnectionOverrideDeletes</li>
+                                <li>externalScenes</li>
+                                <li>subType</li>
+                                <li>extraFactoryDependencies</li>
+                                <li>extraBlueprintDependencies</li>
+                                <li>comments</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     Added &#39;Restrict Results To Selected RPKG&#39; to the
                     Entity Deep Search which can be enabled when you select a
                     specific RPKG to search through. When enabled it will not
