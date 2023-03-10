@@ -18,16 +18,16 @@ export const latest: RpkgVersion = {
                 <li>Support for Hitman 2016 Alpha, Beta and Steam RPKGs.</li>
                 <li>
                     .meta.json files can be used instead of .meta when
-                    generating RPKGs
+                    generating RPKGs.
                     <strong>
                         (.meta is still the default for now since otherwise this
                         would have been a breaking change)
                     </strong>
                 </li>
                 <li>
-                    Added a &quot;hash_path&quot; field into meta.json which
-                    will be used instead of &quot;hash_value&quot; when
-                    converting from .meta.json to .meta
+                    Added a &quot;hash_path&quot; field in meta.json which is
+                    just cosmetic and doesn&#39;t have any function at the
+                    moment.
                 </li>
             </ul>
         </React.Fragment>
