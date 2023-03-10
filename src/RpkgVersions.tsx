@@ -9,6 +9,32 @@ export interface RpkgVersion {
 }
 
 export const latest: RpkgVersion = {
+    id: "2.29.0",
+    date: "10th March 2023",
+    changelog: (
+        <React.Fragment>
+            <h2 id="new-features">New Features</h2>
+            <ul>
+                <li>Support for Hitman 2016 Alpha, Beta and Steam RPKGs.</li>
+                <li>
+                    .meta.json files can be used instead of .meta when
+                    generating RPKGs
+                    <strong>
+                        (.meta is still the default for now since otherwise this
+                        would have been a breaking change)
+                    </strong>
+                </li>
+                <li>
+                    Added a &quot;hash_path&quot; field into meta.json which
+                    will be used instead of &quot;hash_value&quot; when
+                    converting from .meta.json to .meta
+                </li>
+            </ul>
+        </React.Fragment>
+    ),
+}
+
+export const VERSION_2_28_0: RpkgVersion = {
     id: "2.28.0",
     date: "27th February 2023",
     changelog: (
@@ -2342,6 +2368,7 @@ export const VERSION_1_0_0: RpkgVersion = {
 
 export const versions: RpkgVersion[] = [
     latest,
+    VERSION_2_28_0,
     VERSION_2_27_0,
     VERSION_2_26_0,
     VERSION_2_25_0,
