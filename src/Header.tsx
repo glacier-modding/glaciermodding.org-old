@@ -36,6 +36,16 @@ export default function Header({ logo }: HeaderProps) {
                                 variant={"text"}
                                 color={"inherit"}
                             >
+                                <Link href="/g2wwisedatatool">G2WwiseDataTool</Link>
+                            </Button>
+                            <Button
+                                style={{
+                                    fontSize: "1rem",
+                                    textTransform: "none",
+                                }}
+                                variant={"text"}
+                                color={"inherit"}
+                            >
                                 <Link href="/xtea">XTEA Tool</Link>
                             </Button>
                             <Button
